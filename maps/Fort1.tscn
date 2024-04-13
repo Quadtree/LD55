@@ -31,6 +31,7 @@ glow_enabled = true
 glow_blend_mode = 0
 
 [node name="Spatial" instance=ExtResource( 1 )]
+Difficulty = 5.0
 DiffMul = 2.0
 
 [node name="MeshInstance" parent="." index="0"]
