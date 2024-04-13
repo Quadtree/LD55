@@ -50,9 +50,13 @@ script = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, -3 )
 script = null
 
-[node name="Spatial" parent="." index="10" instance=ExtResource( 3 )]
+[node name="Prop9" parent="." index="10" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, -5.28196 )
+script = null
+
+[node name="Spatial" parent="." index="11" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1 )
 
-[node name="DirectionalLight" type="DirectionalLight" parent="." index="11"]
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="12"]
 transform = Transform( 1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 4, 0 )
 light_color = Color( 0.321569, 0.321569, 0.321569, 1 )
