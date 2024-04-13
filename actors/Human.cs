@@ -136,6 +136,8 @@ public class Human : KinematicBody, Actor, HasFaction
         if (BoltCharge <= 1.5f) return;
         BoltCharge = 0;
 
+        GD.Print($"Casting {type} at {target}");
+
         var bolt = GD.Load<PackedScene>($"res://actors/bolts/{type}.tscn").Instance<Bolt>();
         GetTree().CurrentScene.AddChild(bolt);
         bolt.GlobalTranslation = GlobalTranslation;
