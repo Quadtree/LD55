@@ -3,6 +3,7 @@ using System;
 
 public class Damagable : Node
 {
+    [Export]
     public float Health = 100;
 
     public override void _Ready()

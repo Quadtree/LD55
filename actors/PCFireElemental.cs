@@ -129,7 +129,7 @@ public class PCFireElemental : KinematicBody, Actor
         foreach (var it in this.FindChildByType<Area>().GetOverlappingBodies())
         {
             GD.Print(it);
-            Flammable.AddHeat((Node)it, 120);
+            Flammable.AddHeat((Node)it, 150);
         }
     }
 
