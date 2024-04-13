@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Human : MeshInstance, Actor
+public class Human : KinematicBody, Actor
 {
     // Declare member variables here. Examples:
     // private int a = 2;
