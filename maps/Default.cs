@@ -21,6 +21,9 @@ public class Default : Spatial
             ((Node)toDelete).QueueFree();
             difficultyIncreasingObjects.Remove(toDelete);
         }
+
+        var summoner = GetTree().CurrentScene.FindChildByPredicate<Human>(it => it.IsSummoner);
+        if (summoner != null) summoner.SummonerSkill = (int)(25 + Difficulty * 3);
     }
 
     public override void _Process(float delta)
