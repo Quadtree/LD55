@@ -7,6 +7,9 @@ public class Default : Spatial
     [Export]
     public float Difficulty = 10;
 
+    [Export]
+    public float DiffMul = 1;
+
     public static float? DifficultyOverride;
 
     public override void _Ready()
@@ -15,7 +18,7 @@ public class Default : Spatial
 
         var difficultyIncreasingObjects = GetTree().CurrentScene.FindChildrenByType<DifficultyIncreasing>().Where(it => (it as Human)?.IsSummoner != true).ToList();
 
-        while (difficultyIncreasingObjects.Count > 1 && difficultyIncreasingObjects.Sum(it => it.DifficultyAdded) > Difficulty)
+        while (difficultyIncreasingObjects.Count > 1 && difficultyIncreasingObjects.Sum(it => it.DifficultyAdded) > Difficulty * DiffMul)
         {
             var toDelete = Util.Choice(difficultyIncreasingObjects);
             ((Node)toDelete).QueueFree();

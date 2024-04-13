@@ -29,7 +29,7 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
     [Export]
     public int SummonerSkill = 35;
 
-    public int EffectiveSummonerSkill => (IsSummoner && this.FindChildByType<Damagable>().Health > 0) ? SummonerSkill : 0;
+    public int EffectiveSummonerSkill => (IsSummoner && this.FindChildByType<Damagable>().Health > 0 && this.FindChildByType<Flammable>().IsOnFire == false) ? SummonerSkill : 0;
 
     [Export]
     public int FactionId { get; set; }
