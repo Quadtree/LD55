@@ -38,4 +38,13 @@ public class PCFireElemental : KinematicBody
 
         Mana = Util.Clamp(Mana + ManaRegenPerSecond * delta, 0, 100);
     }
+
+    public void FlameSlash()
+    {
+        // var pp = new PhysicsShapeQueryParameters();
+        // pp.ShapeRid = this.FindChildByName<CollisionShape>("FlameSlashShape").Shape.GetRid();
+        // pp.CollisionMask
+
+        // GetWorld().DirectSpaceState.IntersectShape()
+    }
 }
