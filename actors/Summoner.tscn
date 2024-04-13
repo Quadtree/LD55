@@ -5,3 +5,4 @@
 [node name="Summoner" instance=ExtResource( 1 )]
 CanCastFireBolt = true
 CanCastWaterBolt = true
+IsSummoner = true
