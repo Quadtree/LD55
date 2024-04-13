@@ -14,4 +14,13 @@ public class Damagable : Node
     {
 
     }
+
+    public static void TakeDamage(Node node, float damage)
+    {
+        var child = node.GetActor().FindChildByType<Damagable>();
+        if (child != null)
+        {
+            child.Health -= damage;
+        }
+    }
 }

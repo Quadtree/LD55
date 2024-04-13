@@ -47,7 +47,7 @@ public class Flammable : Spatial
 
     public static void AddHeat(Node node, float heat)
     {
-        var child = node.FindChildByType<Flammable>();
+        var child = node.GetActor().FindChildByType<Flammable>();
         if (child != null)
         {
             GD.Print($"Adding {heat} to {child}");

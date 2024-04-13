@@ -7,9 +7,9 @@ public interface Actor
 
 public static class ActorExtensions
 {
-    public static Actor GetActor(this Node self)
+    public static Node GetActor(this Node self)
     {
-        if (self is Actor) return (Actor)self;
-        return self.FindParentByType<Actor>();
+        if (self is Actor) return self;
+        return (Node)self.FindParentByType<Actor>();
     }
 }
