@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://actors/Fireball.cs" type="Script" id=1]
 
 [sub_resource type="SpatialMaterial" id=1]
 emission_enabled = true
@@ -13,3 +15,4 @@ size = Vector3( 0.1, 0.1, 0.1 )
 
 [node name="MeshInstance" type="MeshInstance"]
 mesh = SubResource( 2 )
+script = ExtResource( 1 )

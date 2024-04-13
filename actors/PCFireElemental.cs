@@ -65,6 +65,7 @@ public class PCFireElemental : KinematicBody, Actor
                 else
                 {
                     GD.Print("Fireball!");
+                    Fireball(dest.Value);
                 }
             }
         }
@@ -72,14 +73,6 @@ public class PCFireElemental : KinematicBody, Actor
 
     public void FlameSlash()
     {
-
-
-        // var pp = new PhysicsShapeQueryParameters();
-        // pp.ShapeRid = this.FindChildByName<CollisionShape>("FlameSlashShape").Shape.GetRid();
-        // pp.CollisionMask
-
-        // GetWorld().DirectSpaceState.IntersectShape()
-
         if (Mana < 20) return;
         if (GlobalCooldown < 1) return;
 
@@ -93,5 +86,19 @@ public class PCFireElemental : KinematicBody, Actor
             GD.Print(it);
             Flammable.AddHeat((Node)it, 120);
         }
+    }
+
+    public void Fireball(Vector3 target)
+    {
+        if (Mana < 40) return;
+        if (GlobalCooldown < 1) return;
+
+        Mana -= 40;
+        GlobalCooldown = 0;
+
+        var fb = GD.Load<PackedScene>("res://actors/Fireball.tscn").Instance<Fireball>();
+        GetTree().CurrentScene.AddChild(fb);
+        fb.GlobalTranslation = GlobalTranslation;
+        fb.Target = target;
     }
 }

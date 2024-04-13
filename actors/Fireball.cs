@@ -6,6 +6,8 @@ public class Fireball : MeshInstance
 {
     public Vector3 Target;
 
+    bool Detonated;
+
 
     public override void _Ready()
     {
@@ -17,15 +19,19 @@ public class Fireball : MeshInstance
     {
         if (GlobalTranslation.DistanceSquaredTo(Target) > Mathf.Pow(0.5f, 2))
         {
-            GlobalTranslation += (Target - GlobalTranslation).Normalized() * 16;
+            GlobalTranslation += (Target - GlobalTranslation).Normalized() * 20 * delta;
         }
-        else
+        else if (!Detonated)
         {
             // detonation!
             foreach (var it in GetTree().CurrentScene.FindChildrenByType<Flammable>().Where(it => it.GlobalTranslation.DistanceSquaredTo(GlobalTranslation) < Mathf.Pow(2.5f, 2.0f)))
             {
                 it.Heat += 200;
             }
+
+            Detonated = true;
+
+            QueueFree();
         }
     }
 }
