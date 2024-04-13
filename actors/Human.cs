@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Human : KinematicBody, Actor
+public class Human : KinematicBody, Actor, HasFaction
 {
     [Export]
     public bool CanCastFireBolt;
@@ -12,6 +12,8 @@ public class Human : KinematicBody, Actor
     [Export]
     public bool CanCastWoodBolt;
 
+    [Export]
+    public int FactionId { get; set; }
 
     Vector3 BurnRun;
 
@@ -42,5 +44,15 @@ public class Human : KinematicBody, Actor
             MoveAndSlide(BurnRun * 4);
             return;
         }
+
+        if (Util.RandChance(delta))
+        {
+
+        }
+    }
+
+    void Scan()
+    {
+
     }
 }

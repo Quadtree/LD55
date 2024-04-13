@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public class PCFireElemental : KinematicBody, Actor
+public class PCFireElemental : KinematicBody, Actor, HasFaction
 {
     public float Mana = 50;
 
@@ -146,4 +146,6 @@ public class PCFireElemental : KinematicBody, Actor
         fb.GlobalTranslation = GlobalTranslation;
         fb.Target = target;
     }
+
+    public int FactionId => HasBrokenFree ? 2 : 0;
 }

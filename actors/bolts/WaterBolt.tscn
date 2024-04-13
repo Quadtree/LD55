@@ -13,3 +13,5 @@ height = 0.5
 
 [node name="Bolt" instance=ExtResource( 1 )]
 mesh = SubResource( 2 )
+HeatEffect = -100.0
+DamageEffect = 10.0
