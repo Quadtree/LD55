@@ -16,7 +16,16 @@ public class PCFireElemental : Spatial
 
             if (dest != null)
             {
-                LookAt(dest.Value, Vector3.Up);
+                var cam = this.FindChildByType<Camera>();
+
+                var ct = cam.GlobalTransform;
+
+                var destVal = dest.Value;
+                destVal.y = this.GetGlobalLocation().y;
+
+                LookAt(destVal, Vector3.Up);
+
+                cam.GlobalTransform = ct;
             }
         }
     }
