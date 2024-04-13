@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://maps/Default.tscn" type="PackedScene" id=1]
 [ext_resource path="res://actors/props/WoodenWall.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://actors/TargetArea.tscn" type="PackedScene" id=6]
 [ext_resource path="res://actors/props/SpikeWall.tscn" type="PackedScene" id=7]
 [ext_resource path="res://textures/grass1.png" type="Texture" id=8]
+[ext_resource path="res://actors/EliteCrossbowman.tscn" type="PackedScene" id=9]
 
 [sub_resource type="SpatialMaterial" id=8]
 albedo_color = Color( 0.0313726, 0.501961, 0, 1 )
@@ -140,6 +141,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 0 )
 [node name="KinematicBody10" parent="AlliedAttackers" index="10" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 0 )
 
+[node name="EliteCrossbowman" parent="AlliedAttackers" index="11" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 3 )
+
+[node name="EliteCrossbowman2" parent="AlliedAttackers" index="12" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3 )
+
+[node name="EliteCrossbowman3" parent="AlliedAttackers" index="13" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 4 )
+
+[node name="EliteCrossbowman4" parent="AlliedAttackers" index="14" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 3 )
+
+[node name="EliteCrossbowman5" parent="AlliedAttackers" index="15" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 2 )
+
 [node name="EnemyDefenders" type="Spatial" parent="." index="8"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19 )
 
@@ -181,6 +197,26 @@ FactionId = 1
 
 [node name="KinematicBody10" parent="EnemyDefenders" index="9" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, -32 )
+FactionId = 1
+
+[node name="EliteCrossbowman" parent="EnemyDefenders" index="10" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -35 )
+FactionId = 1
+
+[node name="EliteCrossbowman2" parent="EnemyDefenders" index="11" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -35 )
+FactionId = 1
+
+[node name="EliteCrossbowman3" parent="EnemyDefenders" index="12" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -35 )
+FactionId = 1
+
+[node name="EliteCrossbowman4" parent="EnemyDefenders" index="13" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -35 )
+FactionId = 1
+
+[node name="EliteCrossbowman5" parent="EnemyDefenders" index="14" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -35 )
 FactionId = 1
 
 [node name="TargetArea" parent="." index="9" instance=ExtResource( 6 )]

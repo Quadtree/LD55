@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://actors/Crossbowman.tscn" type="PackedScene" id=1]
+
+[node name="EliteCrossbowman" instance=ExtResource( 1 )]
+DifficultyAdded = 3.0
+AttackChargeRate = 4.0
+
+[node name="Damagable" parent="Human" index="1"]
+Health = 220.0

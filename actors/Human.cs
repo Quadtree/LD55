@@ -24,6 +24,9 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
     public bool IsSummoner;
 
     [Export]
+    public float AttackChargeRate = 1f;
+
+    [Export]
     public int SummonerSkill = 35;
 
     public int EffectiveSummonerSkill => (IsSummoner && this.FindChildByType<Damagable>().Health > 0) ? SummonerSkill : 0;
@@ -67,7 +70,7 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
             return;
         }
 
-        BoltCharge += delta;
+        BoltCharge += delta * AttackChargeRate;
 
         if (this.FindChildByType<Flammable>()?.IsOnFire == true)
         {
