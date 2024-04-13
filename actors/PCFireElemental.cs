@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class PCFireElemental : KinematicBody, Actor, HasFaction
 {
@@ -128,6 +129,18 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                     Fireball(dest.Value);
                     // }
                 }
+            }
+        }
+
+        if (Util.RandChance(delta * 2f))
+        {
+            var targetAreaPos = GetTree().CurrentScene.FindChildByType<TargetArea>()?.GlobalTranslation;
+
+            foreach (var it in GetTree().CurrentScene.FindChildrenByType<Flammable>()
+                .Where(it => HasBrokenFree || it.GlobalTranslation.DistanceSquaredTo(targetAreaPos ?? new Vector3()) < Mathf.Pow(4f, 2.0f))
+                .Where(it => it.GlobalTranslation.DistanceSquaredTo(GlobalTranslation) < Mathf.Pow(2.5f, 2.0f)))
+            {
+                it.Heat += 75;
             }
         }
     }
