@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://maps/Default.tscn" type="PackedScene" id=1]
 [ext_resource path="res://actors/props/WoodenWall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://actors/PCFireElemental.tscn" type="PackedScene" id=3]
+[ext_resource path="res://actors/Crossbowman.tscn" type="PackedScene" id=4]
+[ext_resource path="res://actors/Summoner.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.0313726, 0.501961, 0, 1 )
@@ -97,4 +99,82 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25, 0, 
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 28, 0, -20 )
 
 [node name="PCFireElemental" parent="." index="6" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 14 )
+
+[node name="AlliedAttackers" type="Spatial" parent="." index="7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19 )
+
+[node name="Summoner" parent="AlliedAttackers" index="0" instance=ExtResource( 5 )]
+
+[node name="KinematicBody" parent="AlliedAttackers" index="1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0 )
+
+[node name="KinematicBody3" parent="AlliedAttackers" index="2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0 )
+
+[node name="KinematicBody4" parent="AlliedAttackers" index="3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0 )
+
+[node name="KinematicBody5" parent="AlliedAttackers" index="4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0 )
+
+[node name="KinematicBody6" parent="AlliedAttackers" index="5" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 0 )
+
+[node name="KinematicBody2" parent="AlliedAttackers" index="6" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0 )
+
+[node name="KinematicBody7" parent="AlliedAttackers" index="7" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0 )
+
+[node name="KinematicBody8" parent="AlliedAttackers" index="8" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 0 )
+
+[node name="KinematicBody9" parent="AlliedAttackers" index="9" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 0 )
+
+[node name="KinematicBody10" parent="AlliedAttackers" index="10" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 0 )
+
+[node name="EnemyDefenders" type="Spatial" parent="." index="8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19 )
+
+[node name="KinematicBody" parent="EnemyDefenders" index="0" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -32 )
+FactionId = 1
+
+[node name="KinematicBody3" parent="EnemyDefenders" index="1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -32 )
+FactionId = 1
+
+[node name="KinematicBody4" parent="EnemyDefenders" index="2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -32 )
+FactionId = 1
+
+[node name="KinematicBody5" parent="EnemyDefenders" index="3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -32 )
+FactionId = 1
+
+[node name="KinematicBody6" parent="EnemyDefenders" index="4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -32 )
+FactionId = 1
+
+[node name="KinematicBody2" parent="EnemyDefenders" index="5" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -32 )
+FactionId = 1
+
+[node name="KinematicBody7" parent="EnemyDefenders" index="6" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -32 )
+FactionId = 1
+
+[node name="KinematicBody8" parent="EnemyDefenders" index="7" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -32 )
+FactionId = 1
+
+[node name="KinematicBody9" parent="EnemyDefenders" index="8" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -32 )
+FactionId = 1
+
+[node name="KinematicBody10" parent="EnemyDefenders" index="9" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, -32 )
+FactionId = 1
