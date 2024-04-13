@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://models/warding_rune1.glb" type="PackedScene" id=1]
+[ext_resource path="res://actors/WardingRune.cs" type="Script" id=2]
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 1, 0, 0.94902, 1 )
@@ -16,6 +17,7 @@ data = PoolVector3Array( 0, -1, -1, 0.1951, 1, -0.9808, 0, 1, -1, 0, -1, -1, 0.1
 [node name="WardingRune" type="StaticBody"]
 collision_layer = 4
 collision_mask = 4
+script = ExtResource( 2 )
 
 [node name="warding_rune1" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.947361, 0 )

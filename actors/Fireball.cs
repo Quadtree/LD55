@@ -39,6 +39,16 @@ public class Fireball : MeshInstance
     {
         base._PhysicsProcess(delta);
 
-        if (this.FindChildByType<Area>().GetOverlappingBodies().Count > 0) QueueFree();
+        if (this.FindChildByType<Area>().GetOverlappingBodies().Count > 0)
+        {
+            foreach (var it in this.FindChildByType<Area>().GetOverlappingBodies())
+            {
+                if (it is WardingRune it2)
+                {
+                    it2.Health -= 4;
+                }
+            }
+            QueueFree();
+        }
     }
 }
