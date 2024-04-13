@@ -4,17 +4,17 @@
 - Burn It All
 
 # TODO
-- Humans shoot at eachother
-
 - Warding runes
 - Randomized levels
-- Battlefield scene
 - Inter-level scene, fire quota
 - Win screen
 - Final furniture
+- Final outer walls for fort scene
 - Sound
 - Music
 
 # Done
 - Summoner shoots at out of control FE
 - Furniture in the lab
+- Humans shoot at eachother
+- Battlefield scene
