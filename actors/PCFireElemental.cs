@@ -22,6 +22,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
     public float ManaRegenPerSecond = 10f;
 
     public float TimeBasedBreakoutPower = 0f;
+    public float LevelBasedBreakoutPower = 0f;
+    public float AttemptBasedBreakoutPower = 0f;
 
     public const float GLOBAL_COOLDOWN = 0.75f;
     public const float FIREBALL_MANA_COST = 40;
@@ -106,7 +108,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                         // we are trying to break free
                         if (Mana >= FIREBALL_MANA_COST)
                         {
-                            var breakFreeRoll = Util.RandInt(0, 100);
+                            var breakFreeRoll = Util.RandInt(0, 100) + TimeBasedBreakoutPower + LevelBasedBreakoutPower + AttemptBasedBreakoutPower;
                             if (breakFreeRoll >= SummonerSkill)
                             {
                                 // we have broken free
@@ -118,6 +120,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                             {
                                 // failed to break free
                                 Mana -= FIREBALL_MANA_COST;
+                                AttemptBasedBreakoutPower += 5;
                                 GlobalCooldown = 0;
                             }
                         }
