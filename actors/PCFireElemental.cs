@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class PCFireElemental : Spatial
+public class PCFireElemental : KinematicBody
 {
     public override void _Ready()
     {
