@@ -3,6 +3,11 @@ using System;
 
 public class PCFireElemental : KinematicBody
 {
+    public float Mana = 100;
+
+    [Export]
+    public float ManaRegenPerSecond = 20f;
+
     public override void _Ready()
     {
 
@@ -30,5 +35,7 @@ public class PCFireElemental : KinematicBody
                 MoveAndSlide(destVal - GlobalTranslation);
             }
         }
+
+        Mana = Util.Clamp(Mana + ManaRegenPerSecond * delta, 0, 100);
     }
 }
