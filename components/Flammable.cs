@@ -1,9 +1,12 @@
 using Godot;
 using System;
+using System.Linq;
 
 public class Flammable : Spatial
 {
     public float Heat = 0;
+
+    public const float FIRE_SPEED = 25;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -17,11 +20,23 @@ public class Flammable : Spatial
         if (Heat >= 100)
         {
             Visible = true;
+
+            if (Util.RandChance(delta))
+            {
+                foreach (var it in GetTree().CurrentScene.FindChildrenByType<Flammable>().Where(it => it.GlobalTranslation.DistanceSquaredTo(GlobalTranslation) < Mathf.Pow(2.5f, 2.0f)))
+                {
+                    if (it == this) continue;
+
+                    it.Heat = Util.Clamp(Heat + FIRE_SPEED / 2, 0, 1000);
+                }
+            }
         }
         else
         {
             Visible = false;
         }
+
+        Heat = Util.Clamp(Heat - delta * FIRE_SPEED, 0, 1000);
     }
 
     public static void AddHeat(Node node, float heat)
