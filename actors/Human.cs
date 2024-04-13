@@ -3,6 +3,16 @@ using System;
 
 public class Human : KinematicBody, Actor
 {
+    [Export]
+    public bool CanCastFireBolt;
+
+    [Export]
+    public bool CanCastWaterBolt;
+
+    [Export]
+    public bool CanCastWoodBolt;
+
+
     Vector3 BurnRun;
 
     // Called when the node enters the scene tree for the first time.
