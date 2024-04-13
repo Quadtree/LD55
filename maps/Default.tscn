@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://ui/InGameUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://maps/Default.cs" type="Script" id=2]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 20, 20 )
@@ -18,6 +19,7 @@ ambient_light_sky_contribution = 0.0
 extents = Vector3( 1000, 0.01, 1000 )
 
 [node name="Spatial" type="Spatial"]
+script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )

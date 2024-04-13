@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Linq;
 
-public class Human : KinematicBody, Actor, HasFaction
+public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
 {
     enum BoltType
     {
@@ -21,12 +21,18 @@ public class Human : KinematicBody, Actor, HasFaction
     public bool CanCastWoodBolt;
 
     [Export]
+    public bool IsSummoner;
+
+    [Export]
     public int FactionId { get; set; }
 
     public float BoltCharge;
 
     public Spatial AsSpatial => this;
     public Actor AsActor => this;
+
+    [Export]
+    public float DifficultyAdded { get; set; } = 2;
 
     public Actor MainTarget;
 

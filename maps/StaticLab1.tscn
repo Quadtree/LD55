@@ -32,6 +32,7 @@ size = Vector3( 2, 5, 40 )
 extents = Vector3( 1, 2.5, 20 )
 
 [node name="Spatial" instance=ExtResource( 1 )]
+Difficulty = 2.0
 
 [node name="MeshInstance" parent="." index="0"]
 mesh = SubResource( 4 )
