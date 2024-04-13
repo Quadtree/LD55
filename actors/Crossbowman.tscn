@@ -14,3 +14,6 @@ CanCastWoodBolt = true
 
 [node name="Human" parent="." index="0"]
 mesh = SubResource( 2 )
+
+[node name="Damagable" parent="Human" index="1"]
+Health = 150.0
