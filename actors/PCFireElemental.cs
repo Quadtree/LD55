@@ -26,6 +26,8 @@ public class PCFireElemental : KinematicBody
                 LookAt(destVal, Vector3.Up);
 
                 cam.GlobalTransform = ct;
+
+                MoveAndSlide(destVal - GlobalTranslation);
             }
         }
     }
