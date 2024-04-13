@@ -60,7 +60,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
         var flammable = this.FindChildByType<Flammable>();
         var damagable = this.FindChildByType<Damagable>();
 
-        if (flammable.Heat != 0)
+        if (flammable.Heat < 0)
         {
             damagable.Health += flammable.Heat;
             flammable.Heat = 0;
