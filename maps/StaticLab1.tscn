@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://maps/Default.tscn" type="PackedScene" id=1]
 [ext_resource path="res://actors/props/WoodenWall.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://actors/TargetArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://actors/Crossbowman.tscn" type="PackedScene" id=6]
 [ext_resource path="res://actors/props/CratePile.tscn" type="PackedScene" id=7]
+[ext_resource path="res://actors/props/Table.tscn" type="PackedScene" id=8]
 
 [sub_resource type="PlaneMesh" id=4]
 size = Vector2( 40, 40 )
@@ -207,3 +208,14 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape" type="CollisionShape" parent="OuterWallCircle/StaticBody4" index="1"]
 shape = SubResource( 6 )
+
+[node name="Furniture" type="Spatial" parent="." index="11"]
+
+[node name="Prop" parent="Furniture" index="0" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 10 )
+
+[node name="Prop2" parent="Furniture" index="1" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 8 )
+
+[node name="Prop3" parent="Furniture" index="2" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6 )
