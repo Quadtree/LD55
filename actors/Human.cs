@@ -24,6 +24,11 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
     public bool IsSummoner;
 
     [Export]
+    public int SummonerSkill = 35;
+
+    public int EffectiveSummonerSkill => IsSummoner ? SummonerSkill : 0;
+
+    [Export]
     public int FactionId { get; set; }
 
     public float BoltCharge;

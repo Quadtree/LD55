@@ -7,7 +7,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 {
     public float Mana = 50;
 
-    public float SummonerSkill = 35;
+    public float SummonerSkill => GetTree().CurrentScene.FindChildByPredicate<Human>(it => it.IsSummoner)?.EffectiveSummonerSkill ?? 0;
 
     public float GlobalCooldown = 0;
 
