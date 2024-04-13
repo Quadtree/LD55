@@ -50,6 +50,12 @@ public class Human : KinematicBody, Actor, HasFaction
 
     public override void _PhysicsProcess(float delta)
     {
+        if (this.FindChildByType<Damagable>().Health <= 0)
+        {
+            GlobalRotation = new Vector3(0, GlobalRotation.y, Mathf.Pi / 2);
+            return;
+        }
+
         BoltCharge += delta;
 
         if (this.FindChildByType<Flammable>()?.IsOnFire == true)
