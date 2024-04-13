@@ -65,6 +65,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
             damagable.Health += flammable.Heat;
             flammable.Heat = 0;
         }
+
+        damagable.Health -= delta * 5;
     }
 
     public override void _PhysicsProcess(float delta)
