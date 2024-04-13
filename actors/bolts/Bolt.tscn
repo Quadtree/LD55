@@ -12,6 +12,6 @@ bottom_radius = 0.05
 height = 0.5
 
 [node name="Bolt" type="MeshInstance"]
-transform = Transform( -0.00749935, 0.999947, -0.00708244, -0.999964, -0.00747093, 0.00403127, 0.00397815, 0.00711242, 0.999967, 0, 0, 0 )
+transform = Transform( 1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 0, 0, 0 )
 mesh = SubResource( 2 )
 script = ExtResource( 1 )
