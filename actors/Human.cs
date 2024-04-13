@@ -45,6 +45,11 @@ public class Human : KinematicBody, Actor, HasFaction
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
+
+    }
+
+    public override void _PhysicsProcess(float delta)
+    {
         BoltCharge += delta;
 
         if (this.FindChildByType<Flammable>()?.IsOnFire == true)
@@ -126,7 +131,7 @@ public class Human : KinematicBody, Actor, HasFaction
     {
         v3.y = GlobalTranslation.y;
 
-        LookAt(v3, Vector3.Up);
+        //LookAt(v3, Vector3.Up);
 
         MoveAndSlide((v3 - GlobalTranslation).Normalized() * 4);
     }
