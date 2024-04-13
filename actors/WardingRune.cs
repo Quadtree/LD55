@@ -19,7 +19,7 @@ public class WardingRune : StaticBody, DifficultyIncreasing
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
-        LocalMat.EmissionEnergy = Health * 0.25f;
+        LocalMat.EmissionEnergy = Health * 0.15f;
 
         if (Health <= 0)
         {
