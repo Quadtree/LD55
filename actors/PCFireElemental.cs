@@ -38,6 +38,17 @@ public class PCFireElemental : KinematicBody
             }
         }
 
+
+
+        GlobalCooldown = Util.Clamp(GlobalCooldown + delta, 0, 1);
+
+        Mana = Util.Clamp(Mana + ManaRegenPerSecond * delta, 0, 100);
+    }
+
+    public override void _PhysicsProcess(float delta)
+    {
+        base._PhysicsProcess(delta);
+
         if (Input.IsActionPressed("action") && GlobalCooldown >= 1)
         {
             var dest = Picking.PickPointAtCursor(this);
@@ -57,10 +68,6 @@ public class PCFireElemental : KinematicBody
                 }
             }
         }
-
-        GlobalCooldown = Util.Clamp(GlobalCooldown + delta, 0, 1);
-
-        Mana = Util.Clamp(Mana + ManaRegenPerSecond * delta, 0, 100);
     }
 
     public void FlameSlash()
