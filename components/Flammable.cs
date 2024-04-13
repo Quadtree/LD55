@@ -12,6 +12,8 @@ public class Flammable : Spatial
     [Export]
     public float Flammability = 0.65f;
 
+    public bool IsOnFire => Heat >= IgnitionPoint;
+
     public const float FIRE_SPEED = 25;
 
     // Called when the node enters the scene tree for the first time.
@@ -23,7 +25,7 @@ public class Flammable : Spatial
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
-        if (Heat >= 100)
+        if (IsOnFire)
         {
             Visible = true;
 
