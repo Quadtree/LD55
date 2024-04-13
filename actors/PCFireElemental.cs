@@ -31,6 +31,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
     public override void _Ready()
     {
+        LevelBasedBreakoutPower = InterLevelState.Singleton.PlayerBreakBonus;
     }
 
     public override void _Process(float delta)
@@ -52,7 +53,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
                 cam.GlobalTransform = ct;
 
-                MoveAndSlide((destVal - GlobalTranslation).Normalized() * 6);
+                MoveAndSlide((destVal - GlobalTranslation).Normalized() * (6 + 3 * InterLevelState.Singleton.SpeedUpgrades));
 
                 for (var i = 0; i < GetSlideCount(); ++i)
                 {
