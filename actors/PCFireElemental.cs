@@ -49,6 +49,15 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                 cam.GlobalTransform = ct;
 
                 MoveAndSlide((destVal - GlobalTranslation).Normalized() * 6);
+
+                for (var i = 0; i < GetSlideCount(); ++i)
+                {
+                    var col = GetSlideCollision(i);
+                    if (col.Collider is WardingRune wr)
+                    {
+                        wr.Health -= delta * 5;
+                    }
+                }
             }
         }
 
@@ -115,19 +124,10 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                     }
                 }
 
-
                 if (validTargetArea)
                 {
-                    // if (dest.Value.DistanceTo(GlobalTranslation) < 2.5f)
-                    // {
-                    //     GD.Print("Flame slash!");
-                    //     FlameSlash();
-                    // }
-                    // else
-                    // {
                     GD.Print("Fireball!");
                     Fireball(dest.Value);
-                    // }
                 }
             }
         }
