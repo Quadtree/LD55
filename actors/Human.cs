@@ -16,6 +16,9 @@ public class Human : KinematicBody, Actor, HasFaction
     [Export]
     public int FactionId { get; set; }
 
+    public Spatial AsSpatial => this;
+    public Actor AsActor => this;
+
     public Actor MainTarget;
 
     Vector3 BurnRun;
@@ -66,7 +69,7 @@ public class Human : KinematicBody, Actor, HasFaction
             {
                 var threat = 100.0f;
 
-                threat -= ((Spatial)it).GlobalTranslation.DistanceSquaredTo(GlobalTranslation);
+                threat -= it.GlobalTranslation.DistanceSquaredTo(GlobalTranslation);
 
                 return threat;
             }) as Actor;

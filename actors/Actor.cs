@@ -2,7 +2,7 @@ using Godot;
 
 public interface Actor
 {
-
+    Spatial AsSpatial { get; }
 }
 
 public static class ActorExtensions

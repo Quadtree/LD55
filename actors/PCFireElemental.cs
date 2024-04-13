@@ -14,6 +14,9 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
     public float FirePoints = 0;
 
+    public Spatial AsSpatial => this;
+    public Actor AsActor => this;
+
     [Export]
     public float ManaRegenPerSecond = 20f;
 
