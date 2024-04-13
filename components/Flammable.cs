@@ -37,7 +37,7 @@ public class Flammable : Spatial
                 }
             }
 
-            Damagable.TakeDamage(this, 5 * delta);
+            Damagable.TakeDamage(this, 10 * delta);
         }
         else
         {
