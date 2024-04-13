@@ -130,9 +130,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89298, 0.0265684, 1.61296 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0602, 0.0265398, 2.98973 )
 
 [node name="MeshInstance2" parent="." index="15" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.286134, 0.0296965, -9.80288 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.713866, 0.0296965, -7.80288 )
 
 [node name="BigCratePile" type="Spatial" parent="." index="16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2 )
 
 [node name="Prop" parent="BigCratePile" index="0" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0138578, -9.75443 )
