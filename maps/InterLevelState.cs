@@ -12,5 +12,7 @@ public class InterLevelState
     public int SummonerSkill => (int)(25 + Difficulty * 3);
     public int PlayerBreakBonus => BreakUpgrades * 20;
 
+    public int CurrentFireQuota => 20 + Level * 5;
+
     public static InterLevelState Singleton = new InterLevelState();
 }
