@@ -87,7 +87,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.866503, -0.0138578, -9.56818
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.283041, -0.0138578, -8.7875 )
 
 [node name="Prop4" parent="BigCratePile" index="3" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.15599, -0.0138578, -7.7107 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.15993, -0.0138578, -7.71446 )
 
 [node name="Prop5" parent="BigCratePile" index="4" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.757744, -0.0138578, -12.8317 )

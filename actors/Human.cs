@@ -129,7 +129,7 @@ public class Human : KinematicBody, Actor, HasFaction
 
     void MoveTowards(Vector3 v3)
     {
-        v3.y = GlobalTranslation.y;
+        v3.y = 0.0f;
 
         //LookAt(v3, Vector3.Up);
 
