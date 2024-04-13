@@ -29,41 +29,98 @@ mesh = SubResource( 4 )
 environment = SubResource( 3 )
 
 [node name="Wall1" parent="." index="2" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.94418, 0.00632381, 4.99106 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94418, 0.00632381, 6.99106 )
 
 [node name="Prop2" parent="Wall1" index="3" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
 
-[node name="Prop3" parent="Wall1" index="4" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
-
-[node name="Prop4" parent="Wall1" index="5" instance=ExtResource( 2 )]
+[node name="Prop5" parent="Wall1" index="4" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
 
-[node name="Prop5" parent="Wall1" index="6" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5 )
-
-[node name="Prop6" parent="Wall1" index="7" instance=ExtResource( 2 )]
+[node name="Prop8" parent="Wall1" index="5" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
 
-[node name="Prop7" parent="Wall1" index="8" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7 )
+[node name="Wall2" parent="." index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94418, 0.00632381, -5.00894 )
 
-[node name="Prop8" parent="Wall1" index="9" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+[node name="Prop2" parent="Wall2" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
 
-[node name="Prop9" parent="Wall1" index="10" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.282 )
+[node name="Prop5" parent="Wall2" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
 
-[node name="PCFireElemental" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Prop8" parent="Wall2" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
+
+[node name="Wall3" parent="." index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0558, 0.00632381, 6.99106 )
+
+[node name="Prop2" parent="Wall3" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+
+[node name="Prop5" parent="Wall3" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
+
+[node name="Prop8" parent="Wall3" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
+
+[node name="Wall4" parent="." index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0558, 0.00632381, -5.00894 )
+
+[node name="Prop2" parent="Wall4" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+
+[node name="Prop5" parent="Wall4" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
+
+[node name="Prop8" parent="Wall4" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
+
+[node name="Wall5" parent="." index="6" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.94418, 0.00632381, -13.0089 )
+
+[node name="Prop2" parent="Wall5" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+
+[node name="Prop5" parent="Wall5" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
+
+[node name="Prop8" parent="Wall5" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
+
+[node name="Wall6" parent="." index="7" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.05582, 0.00632381, -13.0089 )
+
+[node name="Prop2" parent="Wall6" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+
+[node name="Wall7" parent="." index="8" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.94418, 0.00632381, 11.9911 )
+
+[node name="Prop2" parent="Wall7" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+
+[node name="Prop5" parent="Wall7" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
+
+[node name="Prop8" parent="Wall7" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
+
+[node name="Wall8" parent="." index="9" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.05582, 0.00632381, 11.9911 )
+
+[node name="Prop2" parent="Wall8" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+
+[node name="PCFireElemental" parent="." index="10" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1 )
 
-[node name="DirectionalLight" type="DirectionalLight" parent="." index="4"]
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="11"]
 transform = Transform( 1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 4, 0 )
 light_color = Color( 0.321569, 0.321569, 0.321569, 1 )
 shadow_enabled = true
 
-[node name="Summoner" parent="." index="7" instance=ExtResource( 4 )]
+[node name="Summoner" parent="." index="14" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.187, 0, 5.545 )
 
 [node name="KinematicBody" parent="Summoner" index="2" instance=ExtResource( 6 )]
@@ -72,10 +129,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89298, 0.0265684, 1.61296 )
 [node name="KinematicBody2" parent="Summoner" index="3" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0602, 0.0265398, 2.98973 )
 
-[node name="MeshInstance2" parent="." index="8" instance=ExtResource( 5 )]
+[node name="MeshInstance2" parent="." index="15" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.286134, 0.0296965, -9.80288 )
 
-[node name="BigCratePile" type="Spatial" parent="." index="9"]
+[node name="BigCratePile" type="Spatial" parent="." index="16"]
 
 [node name="Prop" parent="BigCratePile" index="0" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0138578, -9.75443 )
