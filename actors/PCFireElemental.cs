@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public class PCFireElemental : KinematicBody
+public class PCFireElemental : KinematicBody, Actor
 {
     public float Mana = 50;
 
