@@ -11,23 +11,8 @@ public class PCFireElemental : KinematicBody
     [Export]
     public float ManaRegenPerSecond = 20f;
 
-    List<Node> PossibleFlameSlashTargets = new List<Node>();
-
     public override void _Ready()
     {
-        this.FindChildByType<Area>().Connect("body_entered", this, nameof(FlameSlashBodyEntered));
-        this.FindChildByType<Area>().Connect("body_exited", this, nameof(FlameSlashBodyExited));
-    }
-
-    void FlameSlashBodyEntered(Node node)
-    {
-        GD.Print("ENTERED! " + node);
-        PossibleFlameSlashTargets.Add(node);
-    }
-
-    void FlameSlashBodyExited(Node node)
-    {
-        PossibleFlameSlashTargets.Remove(node);
     }
 
     public override void _Process(float delta)
@@ -103,7 +88,7 @@ public class PCFireElemental : KinematicBody
 
 
 
-        foreach (var it in PossibleFlameSlashTargets)
+        foreach (var it in this.FindChildByType<Area>().GetOverlappingBodies())
         {
             GD.Print(it);
         }
