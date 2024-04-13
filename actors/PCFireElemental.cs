@@ -86,9 +86,9 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
                 if (!validTargetArea)
                 {
-                    var targetAreaPos = GetTree().CurrentScene.FindChildByType<TargetArea>().GlobalTranslation;
+                    var targetAreaPos = GetTree().CurrentScene.FindChildByType<TargetArea>()?.GlobalTranslation;
 
-                    if (dest.Value.DistanceTo(targetAreaPos) > 4)
+                    if (targetAreaPos != null && dest.Value.DistanceTo(targetAreaPos.Value) > 4)
                     {
                         // we are trying to break free
                         if (Mana >= FIREBALL_MANA_COST)
