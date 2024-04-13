@@ -10,6 +10,7 @@ material = SubResource( 1 )
 size = Vector3( 0.6, 1.7, 0.6 )
 
 [node name="KinematicBody" instance=ExtResource( 1 )]
+DifficultyAdded = 1.0
 CanCastWoodBolt = true
 
 [node name="Human" parent="." index="0"]
