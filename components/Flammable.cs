@@ -36,6 +36,8 @@ public class Flammable : Spatial
                     it.Heat = Util.Clamp(Heat + FIRE_SPEED * Flammability, 0, 1000);
                 }
             }
+
+            Damagable.TakeDamage(this, 5 * delta);
         }
         else
         {
@@ -47,6 +49,7 @@ public class Flammable : Spatial
 
     public static void AddHeat(Node node, float heat)
     {
+        GD.Print("ACTOR " + node.FindParentByType<Actor>());
         var child = node.GetActor().FindChildByType<Flammable>();
         if (child != null)
         {
