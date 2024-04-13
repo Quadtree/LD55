@@ -11,6 +11,10 @@ public class PCFireElemental : KinematicBody, Actor
     [Export]
     public float ManaRegenPerSecond = 20f;
 
+    public const float GLOBAL_COOLDOWN = 0.75f;
+    public const float FIREBALL_MANA_COST = 40;
+    public const float FLAME_SLASH_MANA_COST = 20;
+
     public override void _Ready()
     {
     }
@@ -38,9 +42,9 @@ public class PCFireElemental : KinematicBody, Actor
             }
         }
 
+        Util.SpeedUpPhysicsIfNeeded();
 
-
-        GlobalCooldown = Util.Clamp(GlobalCooldown + delta, 0, 1);
+        GlobalCooldown = Util.Clamp(GlobalCooldown + delta, 0, 2);
 
         Mana = Util.Clamp(Mana + ManaRegenPerSecond * delta, 0, 100);
     }
@@ -73,13 +77,11 @@ public class PCFireElemental : KinematicBody, Actor
 
     public void FlameSlash()
     {
-        if (Mana < 20) return;
-        if (GlobalCooldown < 1) return;
+        if (Mana < FLAME_SLASH_MANA_COST) return;
+        if (GlobalCooldown < GLOBAL_COOLDOWN) return;
 
-        Mana -= 20;
+        Mana -= FLAME_SLASH_MANA_COST;
         GlobalCooldown = 0;
-
-
 
         foreach (var it in this.FindChildByType<Area>().GetOverlappingBodies())
         {
@@ -90,10 +92,10 @@ public class PCFireElemental : KinematicBody, Actor
 
     public void Fireball(Vector3 target)
     {
-        if (Mana < 40) return;
-        if (GlobalCooldown < 1) return;
+        if (Mana < FIREBALL_MANA_COST) return;
+        if (GlobalCooldown < GLOBAL_COOLDOWN) return;
 
-        Mana -= 40;
+        Mana -= FIREBALL_MANA_COST;
         GlobalCooldown = 0;
 
         var fb = GD.Load<PackedScene>("res://actors/Fireball.tscn").Instance<Fireball>();
