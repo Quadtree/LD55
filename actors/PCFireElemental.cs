@@ -117,16 +117,16 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
                 if (validTargetArea)
                 {
-                    if (dest.Value.DistanceTo(GlobalTranslation) < 2.5f)
-                    {
-                        GD.Print("Flame slash!");
-                        FlameSlash();
-                    }
-                    else
-                    {
-                        GD.Print("Fireball!");
-                        Fireball(dest.Value);
-                    }
+                    // if (dest.Value.DistanceTo(GlobalTranslation) < 2.5f)
+                    // {
+                    //     GD.Print("Flame slash!");
+                    //     FlameSlash();
+                    // }
+                    // else
+                    // {
+                    GD.Print("Fireball!");
+                    Fireball(dest.Value);
+                    // }
                 }
             }
         }
