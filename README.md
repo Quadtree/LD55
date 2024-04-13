@@ -4,7 +4,6 @@
 - Burn It All
 
 # TODO
-- Summoner shoots at out of control FE
 - Humans shoot at eachother
 - Furniture in the lab
 - Warding runes
@@ -14,3 +13,6 @@
 - Win screen
 - Sound
 - Music
+
+# Done
+- Summoner shoots at out of control FE
