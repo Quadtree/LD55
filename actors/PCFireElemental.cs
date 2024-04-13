@@ -21,6 +21,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
     [Export]
     public float ManaRegenPerSecond = 10f;
 
+    public float TimeBasedBreakoutPower = 0f;
+
     public const float GLOBAL_COOLDOWN = 0.75f;
     public const float FIREBALL_MANA_COST = 40;
     public const float FLAME_SLASH_MANA_COST = 20;
@@ -60,6 +62,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                 }
             }
         }
+
+        TimeBasedBreakoutPower += delta * 2;
 
         Util.SpeedUpPhysicsIfNeeded();
 
