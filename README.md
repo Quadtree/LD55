@@ -4,7 +4,7 @@
 - Burn It All
 
 # TODO
-- Randomized levels
+- Differing summoner skills
 - Inter-level scene, fire quota
 - Win screen
 - Final furniture
@@ -18,3 +18,4 @@
 - Humans shoot at eachother
 - Battlefield scene
 - Warding runes
+- Randomized levels
