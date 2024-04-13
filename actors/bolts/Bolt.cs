@@ -23,7 +23,7 @@ public class Bolt : MeshInstance
     {
         LookAt(Target.GlobalTranslation, Vector3.Up);
 
-        GlobalTranslate((Target.GlobalTranslation - GlobalTranslation).Normalized() * 20);
+        GlobalTranslate((Target.GlobalTranslation - GlobalTranslation).Normalized() * 20 * delta);
 
         if (!HasImpacted && Target.GlobalTranslation.DistanceSquaredTo(GlobalTranslation) < 1)
         {
