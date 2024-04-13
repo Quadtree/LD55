@@ -41,9 +41,11 @@ fov = 20.0
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 3 )
 
-[node name="Area" type="Area" parent="."]
+[node name="FlameSlashArea" type="Area" parent="."]
+collision_layer = 2
+collision_mask = 2
 
-[node name="FlameSlashShape" type="CollisionShape" parent="Area"]
+[node name="FlameSlashShape" type="CollisionShape" parent="FlameSlashArea"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.05956 )
 shape = SubResource( 4 )
 disabled = true
