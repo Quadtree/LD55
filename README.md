@@ -4,7 +4,7 @@
 - Burn It All
 
 # TODO
-- Inter-level scene, fire quota
+- Post level screen
 - Win screen
 - Final furniture
 - Final outer walls for fort scene
@@ -19,3 +19,4 @@
 - Warding runes
 - Randomized levels
 - Differing summoner skills
+- Inter-level scene, fire quota
