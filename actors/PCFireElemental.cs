@@ -65,11 +65,12 @@ public class PCFireElemental : KinematicBody, Actor
             {
                 GD.Print($"Dist={dest.Value.DistanceTo(GlobalTranslation)}");
 
-                var targetAreaPos = GetTree().CurrentScene.FindChildByType<TargetArea>().GlobalTranslation;
                 var validTargetArea = HasBrokenFree;
 
                 if (!validTargetArea)
                 {
+                    var targetAreaPos = GetTree().CurrentScene.FindChildByType<TargetArea>().GlobalTranslation;
+
                     if (dest.Value.DistanceTo(targetAreaPos) > 4)
                     {
                         // we are trying to break free
@@ -81,6 +82,7 @@ public class PCFireElemental : KinematicBody, Actor
                                 // we have broken free
                                 HasBrokenFree = true;
                                 validTargetArea = true;
+                                GetTree().CurrentScene.FindChildByType<TargetArea>().QueueFree();
                             }
                             else
                             {
