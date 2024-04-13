@@ -3,7 +3,7 @@ using System;
 
 public class PCFireElemental : KinematicBody
 {
-    public float Mana = 100;
+    public float Mana = 50;
 
     [Export]
     public float ManaRegenPerSecond = 20f;

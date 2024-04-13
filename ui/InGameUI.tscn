@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ui/StatusLabel.cs" type="Script" id=1]
-[ext_resource path="res://fonts/MainMedium.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/MainLarge.tres" type="DynamicFont" id=2]
 
 [node name="InGameUI" type="Control"]
 anchor_right = 1.0
@@ -14,6 +14,9 @@ margin_left = 28.0
 margin_top = 22.0
 margin_right = 495.8
 margin_bottom = 48.96
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 4
 custom_fonts/font = ExtResource( 2 )
 text = "Mana: 150"
 script = ExtResource( 1 )
