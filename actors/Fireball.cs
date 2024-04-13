@@ -34,4 +34,11 @@ public class Fireball : MeshInstance
             QueueFree();
         }
     }
+
+    public override void _PhysicsProcess(float delta)
+    {
+        base._PhysicsProcess(delta);
+
+        if (this.FindChildByType<Area>().GetOverlappingBodies().Count > 0) QueueFree();
+    }
 }

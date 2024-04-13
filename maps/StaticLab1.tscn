@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://maps/Default.tscn" type="PackedScene" id=1]
 [ext_resource path="res://actors/props/WoodenWall.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://actors/Crossbowman.tscn" type="PackedScene" id=6]
 [ext_resource path="res://actors/props/CratePile.tscn" type="PackedScene" id=7]
 [ext_resource path="res://actors/props/Table.tscn" type="PackedScene" id=8]
+[ext_resource path="res://actors/WardingRune.tscn" type="PackedScene" id=9]
 
 [sub_resource type="PlaneMesh" id=4]
 size = Vector2( 40, 40 )
@@ -219,3 +220,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 8 )
 
 [node name="Prop3" parent="Furniture" index="2" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 8.82, 8, 0, 6 )
+
+[node name="WardingRune" parent="." index="12" instance=ExtResource( 9 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 1, 0, 1 )
