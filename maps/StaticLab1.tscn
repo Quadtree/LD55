@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://maps/Default.tscn" type="PackedScene" id=1]
 [ext_resource path="res://actors/WoodenWall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://actors/PCFireElemental.tscn" type="PackedScene" id=3]
+[ext_resource path="res://actors/Summoner.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ProceduralSky" id=2]
 
@@ -51,3 +52,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1 )
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="12"]
 transform = Transform( 1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 4, 0 )
 light_color = Color( 0.321569, 0.321569, 0.321569, 1 )
+
+[node name="Summoner" parent="." index="15" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18709, 1.00842, 5.5447 )
+skeleton = NodePath("../Spatial")
