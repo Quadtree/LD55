@@ -6,6 +6,12 @@ public class Flammable : Spatial
 {
     public float Heat = 0;
 
+    [Export]
+    public float IgnitionPoint = 100;
+
+    [Export]
+    public float Flammability = 0.65f;
+
     public const float FIRE_SPEED = 25;
 
     // Called when the node enters the scene tree for the first time.
@@ -27,7 +33,7 @@ public class Flammable : Spatial
                 {
                     if (it == this) continue;
 
-                    it.Heat = Util.Clamp(Heat + FIRE_SPEED / 2, 0, 1000);
+                    it.Heat = Util.Clamp(Heat + FIRE_SPEED * Flammability, 0, 1000);
                 }
             }
         }

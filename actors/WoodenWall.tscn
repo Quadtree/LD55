@@ -16,3 +16,4 @@ collision_mask = 3
 shape = SubResource( 1 )
 
 [node name="Flammable" parent="StaticBody" index="1" instance=ExtResource( 2 )]
+Flammability = 0.5
