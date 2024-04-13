@@ -19,7 +19,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
     public Actor AsActor => this;
 
     [Export]
-    public float ManaRegenPerSecond = 20f;
+    public float ManaRegenPerSecond = 10f;
 
     public const float GLOBAL_COOLDOWN = 0.75f;
     public const float FIREBALL_MANA_COST = 40;
