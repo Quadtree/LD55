@@ -65,7 +65,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
             }
         }
 
-        TimeBasedBreakoutPower += delta * 2;
+        TimeBasedBreakoutPower += delta * 1.2f;
 
         Util.SpeedUpPhysicsIfNeeded();
 
