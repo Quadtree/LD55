@@ -6,6 +6,8 @@ public class PCFireElemental : KinematicBody, Actor
 {
     public float Mana = 50;
 
+    public float SummonerSkill = 35;
+
     public float GlobalCooldown = 0;
 
     [Export]
