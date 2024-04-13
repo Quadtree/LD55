@@ -117,11 +117,11 @@ public class Human : KinematicBody, Actor, HasFaction
     void Scan()
     {
         var possibleTargets = GetTree().CurrentScene.FindChildrenByType<HasFaction>()
-            .Where(it => it.FactionId != this.FactionId);
+            .Where(it => it.FactionId != this.FactionId)
+            .Where(it => it.AsActor.AsSpatial.FindChildByType<Damagable>().Health > 0);
 
         if (possibleTargets.Any())
         {
-
             MainTarget = possibleTargets.MaxBy(it =>
             {
                 var threat = 100.0f;
