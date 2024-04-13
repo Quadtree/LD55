@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://actors/PCFireElemental.cs" type="Script" id=1]
 [ext_resource path="res://components/Damagable.tscn" type="PackedScene" id=2]
+[ext_resource path="res://components/Flammable.tscn" type="PackedScene" id=3]
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 1, 0.690196, 0, 1 )
@@ -53,3 +54,7 @@ shape = SubResource( 4 )
 
 [node name="Damagable" parent="." instance=ExtResource( 2 )]
 Health = 300.0
+
+[node name="Flammable" parent="." instance=ExtResource( 3 )]
+IgnitionPoint = 1e+06
+Flammability = 0.0

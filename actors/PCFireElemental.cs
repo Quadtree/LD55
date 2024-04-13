@@ -56,6 +56,15 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
         GlobalCooldown = Util.Clamp(GlobalCooldown + delta, 0, 2);
 
         Mana = Util.Clamp(Mana + ManaRegenPerSecond * delta, 0, 100);
+
+        var flammable = this.FindChildByType<Flammable>();
+        var damagable = this.FindChildByType<Damagable>();
+
+        if (flammable.Heat != 0)
+        {
+            damagable.Health += flammable.Heat;
+            flammable.Heat = 0;
+        }
     }
 
     public override void _PhysicsProcess(float delta)
