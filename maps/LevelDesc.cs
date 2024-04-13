@@ -8,7 +8,8 @@ public class LevelDesc : Label
     public override void _Ready()
     {
         var txt = Text;
-        Templater = () => txt.Replace("<Quota>", InterLevelState.Singleton.AvailableUpgradePoints.ToString());
+        Templater = () => txt.Replace("<Quota>", InterLevelState.Singleton.CurrentFireQuota.ToString())
+            .Replace("##%", $"{InterLevelState.Singleton.SummonerSkill - InterLevelState.Singleton.PlayerBreakBonus}%");
     }
 
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -8,21 +8,23 @@
 margin_left = 565.0
 margin_right = 883.0
 margin_bottom = 195.0
+rect_min_size = Vector2( 450, 0 )
 script = ExtResource( 3 )
 
 [node name="UpgradePointsLabel" type="Label" parent="."]
-margin_right = 318.0
+margin_right = 450.0
 margin_bottom = 49.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2
 custom_fonts/font = ExtResource( 2 )
 text = "Increase Firepower (#)"
+align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 69.0
+margin_left = 135.0
 margin_top = 53.0
-margin_right = 249.0
+margin_right = 315.0
 margin_bottom = 143.0
 size_flags_horizontal = 4
 custom_constants/separation = 20
