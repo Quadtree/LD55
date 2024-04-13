@@ -40,6 +40,9 @@ public class Flammable : Spatial
             }
 
             Damagable.TakeDamage(this, 10 * delta);
+
+            var pc = GetTree().CurrentScene.FindChildByType<PCFireElemental>();
+            if (pc != null) pc.FirePoints += delta;
         }
         else
         {

@@ -17,6 +17,7 @@ public class StatusLabel : Label
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
-        Text = $"Mana: {GetTree().CurrentScene.FindChildByType<PCFireElemental>().Mana:n0} Summoner Skill: {GetTree().CurrentScene.FindChildByType<PCFireElemental>().SummonerSkill:n0} Broken Free: {GetTree().CurrentScene.FindChildByType<PCFireElemental>().HasBrokenFree}";
+        var pc = GetTree().CurrentScene.FindChildByType<PCFireElemental>();
+        Text = $"Mana: {pc.Mana:n0}     Summoner Skill: {pc.SummonerSkill:n0}     Broken Free: {pc.HasBrokenFree}     Fire Points: {pc.FirePoints:n0}";
     }
 }

@@ -12,6 +12,8 @@ public class PCFireElemental : KinematicBody, Actor
 
     public bool HasBrokenFree = false;
 
+    public float FirePoints = 0;
+
     [Export]
     public float ManaRegenPerSecond = 20f;
 
