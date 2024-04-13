@@ -4,7 +4,6 @@
 - Burn It All
 
 # TODO
-- Warding runes
 - Randomized levels
 - Inter-level scene, fire quota
 - Win screen
@@ -18,3 +17,4 @@
 - Furniture in the lab
 - Humans shoot at eachother
 - Battlefield scene
+- Warding runes
