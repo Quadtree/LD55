@@ -58,7 +58,7 @@ public class Human : KinematicBody, Actor, HasFaction
                 ).Normalized();
             }
 
-            MoveAndSlide(BurnRun * 4);
+            MoveTowards(GlobalTranslation + BurnRun * 10);
             return;
         }
 
