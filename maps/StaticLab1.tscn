@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://maps/Default.tscn" type="PackedScene" id=1]
 [ext_resource path="res://actors/props/WoodenWall.tscn" type="PackedScene" id=2]
@@ -9,9 +9,13 @@
 [ext_resource path="res://actors/props/CratePile.tscn" type="PackedScene" id=7]
 [ext_resource path="res://actors/props/Table.tscn" type="PackedScene" id=8]
 [ext_resource path="res://actors/WardingRune.tscn" type="PackedScene" id=9]
+[ext_resource path="res://textures/stone.png" type="Texture" id=10]
 
 [sub_resource type="PlaneMesh" id=4]
 size = Vector2( 40, 40 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_texture = ExtResource( 10 )
 
 [sub_resource type="ProceduralSky" id=2]
 
@@ -22,6 +26,8 @@ background_color = Color( 0.470588, 0.470588, 0.470588, 1 )
 ambient_light_color = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
 ambient_light_sky_contribution = 0.0
 tonemap_mode = 4
+auto_exposure_enabled = true
+auto_exposure_min_luma = 0.3
 glow_enabled = true
 glow_blend_mode = 0
 
@@ -35,6 +41,7 @@ extents = Vector3( 1, 2.5, 20 )
 
 [node name="MeshInstance" parent="." index="0"]
 mesh = SubResource( 4 )
+material/0 = SubResource( 7 )
 
 [node name="WorldEnvironment" parent="." index="1"]
 environment = SubResource( 3 )
