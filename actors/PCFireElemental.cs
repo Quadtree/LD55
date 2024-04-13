@@ -10,6 +10,8 @@ public class PCFireElemental : KinematicBody, Actor
 
     public float GlobalCooldown = 0;
 
+    public bool HasBrokenFree = false;
+
     [Export]
     public float ManaRegenPerSecond = 20f;
 
@@ -63,15 +65,50 @@ public class PCFireElemental : KinematicBody, Actor
             {
                 GD.Print($"Dist={dest.Value.DistanceTo(GlobalTranslation)}");
 
-                if (dest.Value.DistanceTo(GlobalTranslation) < 2.5f)
+                var targetAreaPos = GetTree().CurrentScene.FindChildByType<TargetArea>().GlobalTranslation;
+                var validTargetArea = HasBrokenFree;
+
+                if (!validTargetArea)
                 {
-                    GD.Print("Flame slash!");
-                    FlameSlash();
+                    if (dest.Value.DistanceTo(targetAreaPos) > 4)
+                    {
+                        // we are trying to break free
+                        if (Mana >= FIREBALL_MANA_COST)
+                        {
+                            var breakFreeRoll = Util.RandInt(0, 100);
+                            if (breakFreeRoll >= SummonerSkill)
+                            {
+                                // we have broken free
+                                HasBrokenFree = true;
+                                validTargetArea = true;
+                            }
+                            else
+                            {
+                                // failed to break free
+                                Mana -= FIREBALL_MANA_COST;
+                                GlobalCooldown = 0;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        validTargetArea = true;
+                    }
                 }
-                else
+
+
+                if (validTargetArea)
                 {
-                    GD.Print("Fireball!");
-                    Fireball(dest.Value);
+                    if (dest.Value.DistanceTo(GlobalTranslation) < 2.5f)
+                    {
+                        GD.Print("Flame slash!");
+                        FlameSlash();
+                    }
+                    else
+                    {
+                        GD.Print("Fireball!");
+                        Fireball(dest.Value);
+                    }
                 }
             }
         }
