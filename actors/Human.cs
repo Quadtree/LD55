@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Linq;
 
 public class Human : KinematicBody, Actor, HasFaction
 {
@@ -14,6 +15,8 @@ public class Human : KinematicBody, Actor, HasFaction
 
     [Export]
     public int FactionId { get; set; }
+
+    public Actor MainTarget;
 
     Vector3 BurnRun;
 
@@ -53,6 +56,20 @@ public class Human : KinematicBody, Actor, HasFaction
 
     void Scan()
     {
+        var possibleTargets = GetTree().CurrentScene.FindChildrenByType<HasFaction>()
+            .Where(it => it.FactionId != this.FactionId);
 
+        if (possibleTargets.Any())
+        {
+
+            MainTarget = possibleTargets.MaxBy(it =>
+            {
+                var threat = 100.0f;
+
+                threat -= ((Spatial)it).GlobalTranslation.DistanceSquaredTo(GlobalTranslation);
+
+                return threat;
+            }) as Actor;
+        }
     }
 }
