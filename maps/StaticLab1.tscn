@@ -20,39 +20,30 @@ environment = SubResource( 3 )
 
 [node name="Prop" parent="." index="2" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, 5 )
-script = null
 
 [node name="Prop2" parent="." index="3" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, 4 )
-script = null
 
 [node name="Prop3" parent="." index="4" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, 3 )
-script = null
 
 [node name="Prop4" parent="." index="5" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, 2 )
-script = null
 
 [node name="Prop5" parent="." index="6" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, 0 )
-script = null
 
 [node name="Prop6" parent="." index="7" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, -1 )
-script = null
 
 [node name="Prop7" parent="." index="8" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, -2 )
-script = null
 
 [node name="Prop8" parent="." index="9" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, -3 )
-script = null
 
 [node name="Prop9" parent="." index="10" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, -5.28196 )
-script = null
 
 [node name="Spatial" parent="." index="11" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1 )
