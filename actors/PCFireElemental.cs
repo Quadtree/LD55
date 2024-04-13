@@ -13,7 +13,11 @@ public class PCFireElemental : Spatial
         if (Input.IsActionPressed("move"))
         {
             var dest = Picking.PickPointAtCursor(this);
-            GD.Print(dest);
+
+            if (dest != null)
+            {
+                LookAt(dest.Value, Vector3.Up);
+            }
         }
     }
 }
