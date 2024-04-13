@@ -4,7 +4,6 @@
 - Burn It All
 
 # TODO
-- Differing summoner skills
 - Inter-level scene, fire quota
 - Win screen
 - Final furniture
@@ -19,3 +18,4 @@
 - Battlefield scene
 - Warding runes
 - Randomized levels
+- Differing summoner skills
