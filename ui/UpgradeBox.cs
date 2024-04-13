@@ -18,13 +18,14 @@ public class UpgradeBox : VBoxContainer
 
     public override void _Ready()
     {
-
+        this.FindChildByName<Button>("IncButton").Connect("pressed", this, nameof(Increase));
+        this.FindChildByName<Button>("DecButton").Connect("pressed", this, nameof(Decrease));
     }
 
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
-
+        this.FindChildByType<Label>().Text = $"Increase {TextTemplate} ({GetBase()})";
     }
 
     void SetBase(int val)
@@ -41,5 +42,15 @@ public class UpgradeBox : VBoxContainer
         if (SelectedStatType == StatType.Break) return InterLevelState.Singleton.BreakUpgrades;
 
         throw new Exception();
+    }
+
+    void Increase()
+    {
+        if (InterLevelState.Singleton.AvailableUpgradePoints > 0) SetBase(GetBase() + 1);
+    }
+
+    void Decrease()
+    {
+        if (GetBase() > 0) SetBase(GetBase() - 1);
     }
 }

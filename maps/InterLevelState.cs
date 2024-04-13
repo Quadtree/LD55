@@ -1,6 +1,6 @@
 public class InterLevelState
 {
-    public int Level;
+    public int Level = 1;
     public int FirepowerUpgrades;
     public int SpeedUpgrades;
     public int BreakUpgrades;
