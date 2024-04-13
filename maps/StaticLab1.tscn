@@ -218,4 +218,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 10 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 8 )
 
 [node name="Prop3" parent="Furniture" index="2" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 8.82, 8, 0, 6 )
