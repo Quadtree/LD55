@@ -140,7 +140,6 @@ public class Human : KinematicBody, Actor, HasFaction
 
         var bolt = GD.Load<PackedScene>($"res://actors/bolts/{type}.tscn").Instance<Bolt>();
         GetTree().CurrentScene.AddChild(bolt);
-        bolt.GlobalTranslation = GlobalTranslation;
-        bolt.Target = target.AsSpatial;
+        bolt.AimAtPoint(GlobalTranslation, target.AsSpatial);
     }
 }

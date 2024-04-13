@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Bolt : MeshInstance
+public class Bolt : Spatial
 {
     [Export]
     public float HeatEffect = 0;
@@ -15,17 +15,16 @@ public class Bolt : MeshInstance
 
     public bool HasImpacted;
 
-    public float TimeToLive;
+    public float TimeToLive = 4;
 
     public override void _Ready()
     {
 
     }
 
-    //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
-        GlobalTranslate(Trajectory * 20 * delta);
+        GlobalTranslate(Trajectory * 10 * delta);
 
         if (!HasImpacted && Target.GlobalTranslation.DistanceSquaredTo(GlobalTranslation) < 1)
         {
@@ -35,6 +34,9 @@ public class Bolt : MeshInstance
             Flammable.AddHeat(Target, HeatEffect);
             Damagable.TakeDamage(Target, DamageEffect);
         }
+
+        TimeToLive -= delta;
+        if (TimeToLive < 0) QueueFree();
     }
 
     public void AimAtPoint(Vector3 sourcePoint, Spatial target)
