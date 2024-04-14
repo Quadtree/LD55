@@ -70,6 +70,12 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
+        if (this.FindChildByType<Damagable>().Health <= 0)
+        {
+            this.FindChildByType<AnimationPlayer>().Play(StandAnimation);
+            return;
+        }
+
         if (BoltCharge < 1 && (AttackAnimation?.Length ?? 0) > 0)
         {
             this.FindChildByType<AnimationPlayer>().Play(AttackAnimation);
@@ -176,7 +182,7 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
     {
         v3.y = 0.0f;
 
-        this.FindChildByName<Spatial>("human").LookAt(v3, Vector3.Up);
+        this.FindChildByName<Spatial>("HumanRotator").LookAt(v3, Vector3.Up);
 
         MoveAndSlide((v3 - GlobalTranslation).Normalized() * 4);
     }

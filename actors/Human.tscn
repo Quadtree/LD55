@@ -28,15 +28,18 @@ mesh = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.84685, 0 )
 shape = SubResource( 2 )
 
-[node name="human" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.351471, 0, -3.07265e-08, 0, 0.351471, 0, 3.07265e-08, 0, -0.351471, 0, 0, 0 )
-
-[node name="Robe" parent="human/Armature/Skeleton" index="1"]
-visible = false
-
 [node name="Flammable" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0 )
 
 [node name="Damagable" parent="." instance=ExtResource( 2 )]
 
-[editable path="human"]
+[node name="HumanRotator" type="Spatial" parent="."]
+transform = Transform( 0.351471, 0, 0, 0, 0.351471, 0, 0, 0, 0.351471, 0, 0, 0 )
+
+[node name="human" parent="HumanRotator" instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Robe" parent="HumanRotator/human/Armature/Skeleton" index="1"]
+visible = false
+
+[editable path="HumanRotator/human"]
