@@ -18,4 +18,8 @@ material/0 = ExtResource( 2 )
 visible = true
 material/0 = ExtResource( 2 )
 
+[node name="crossbow" parent="HumanRotator/human" index="2"]
+visible = false
+
 [editable path="HumanRotator/human"]
+[editable path="HumanRotator/human/crossbow"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://actors/bolts/Bolt.tscn" type="PackedScene" id=1]
 
@@ -11,9 +11,18 @@ top_radius = 0.05
 bottom_radius = 0.05
 height = 0.5
 
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.0588235, 0, 0.87451, 1 )
+roughness = 0.0
+
 [node name="Bolt" instance=ExtResource( 1 )]
 HeatEffect = -100.0
 DamageEffect = 10.0
 
 [node name="Bolt" parent="." index="0"]
 mesh = SubResource( 2 )
+
+[node name="Cube" parent="bolt" index="0"]
+material/0 = SubResource( 3 )
+
+[editable path="bolt"]
