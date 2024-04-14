@@ -1,7 +1,6 @@
 public class InterLevelState
 {
     public static string[] RANKS = {
-        "Spark",
         "Candle",
         "Torch",
         "Campfire",
