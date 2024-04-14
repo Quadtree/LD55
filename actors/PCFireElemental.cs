@@ -100,7 +100,14 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
             // end level
             InterLevelState.Singleton.LastLevelFirePoints = FirePoints;
 
-            GetTree().ChangeScene("res://maps/LevelOverScreen.tscn");
+            if (FirePoints >= InterLevelState.Singleton.CurrentFireQuota && InterLevelState.Singleton.Level >= 4)
+            {
+                GetTree().ChangeScene("res://maps/WinGameScreen.tscn");
+            }
+            else
+            {
+                GetTree().ChangeScene("res://maps/LevelOverScreen.tscn");
+            }
         }
     }
 
