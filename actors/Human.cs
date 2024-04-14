@@ -176,7 +176,7 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
     {
         v3.y = 0.0f;
 
-        //LookAt(v3, Vector3.Up);
+        this.FindChildByName<Spatial>("human").LookAt(v3, Vector3.Up);
 
         MoveAndSlide((v3 - GlobalTranslation).Normalized() * 4);
     }

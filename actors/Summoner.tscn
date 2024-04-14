@@ -9,3 +9,8 @@ IsSummoner = true
 StandAnimation = "StandCaster"
 MoveAnimation = "RunCaster"
 AttackAnimation = "CasterCast"
+
+[node name="Robe" parent="human/Armature/Skeleton" index="1"]
+visible = true
+
+[editable path="human"]
