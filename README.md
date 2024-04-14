@@ -6,7 +6,6 @@
 # TODO
 
 ## Day 3
-- Final character graphics
 - Final furniture
 - Final outer walls for fort scene
 - Ensure upgrades actually work
@@ -28,3 +27,4 @@
 - Win screen
 - Title screen
 - Post level screen
+- Final character graphics
