@@ -55,6 +55,10 @@ transform = Transform( -0.22217, 0, -1.94227e-08, 0, 0.22217, 0, 1.94227e-08, 0,
 [node name="Plane" parent="Rotator/fire_elemental/Armature/Skeleton" index="0"]
 material/0 = ExtResource( 5 )
 
+[node name="AnimationPlayer" parent="Rotator/fire_elemental" index="1"]
+playback_default_blend_time = 0.1
+playback_speed = 1.5
+
 [node name="OmniLight" type="OmniLight" parent="."]
 light_color = Color( 1, 0.690196, 0, 1 )
 omni_range = 15.0
