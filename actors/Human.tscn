@@ -52,7 +52,7 @@ material/0 = ExtResource( 5 )
 visible = false
 
 [node name="crossbow" parent="HumanRotator/human" instance=ExtResource( 6 )]
-transform = Transform( -0.452692, 0, 3.95756e-08, 0, 0.452692, 0, -3.95756e-08, 0, -0.452692, 8.97578e-08, 3.45461, -1.02671 )
+transform = Transform( 0.452692, 0, 3.55271e-15, 0, 0.452692, 0, -3.55271e-15, 0, 0.452692, -9.3119e-08, 3.45461, 1.06516 )
 
 [node name="Cube" parent="HumanRotator/human/crossbow" index="0"]
 transform = Transform( 1, 0, -3.38813e-21, 0, 1, 0, 3.38813e-21, 0, 1, 0, 0, 0 )
