@@ -31,6 +31,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
     public const float FIREBALL_MANA_COST = 40;
     public const float FLAME_SLASH_MANA_COST = 20;
 
+    public const float DECAY_RATE = 7;
+
     public override void _Ready()
     {
         LevelBasedBreakoutPower = InterLevelState.Singleton.PlayerBreakBonus;
@@ -87,7 +89,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
             flammable.Heat = 0;
         }
 
-        damagable.Health -= delta * 7;
+        damagable.Health -= delta * DECAY_RATE;
 
         if (Input.IsActionJustPressed("cheat_finish_level"))
         {
