@@ -6,6 +6,9 @@
 # TODO
 - Post level screen
 - Win screen
+
+## Day 3
+- Final character graphics
 - Final furniture
 - Final outer walls for fort scene
 - Sound
