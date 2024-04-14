@@ -94,6 +94,12 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
         {
             FirePoints += 100;
         }
+
+        if (this.FindChildByType<Damagable>().Health <= 0)
+        {
+            // end level
+            InterLevelState.Singleton.LastLevelFirePoints = FirePoints;
+        }
     }
 
     public override void _PhysicsProcess(float delta)

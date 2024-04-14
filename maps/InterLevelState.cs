@@ -14,5 +14,7 @@ public class InterLevelState
 
     public int CurrentFireQuota => 20 + Level * 5;
 
+    public float LastLevelFirePoints = 0;
+
     public static InterLevelState Singleton = new InterLevelState();
 }
