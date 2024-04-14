@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://actors/PCFireElemental.cs" type="Script" id=1]
 [ext_resource path="res://components/Damagable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://components/Flammable.tscn" type="PackedScene" id=3]
 [ext_resource path="res://models/fire_elemental.glb" type="PackedScene" id=4]
 [ext_resource path="res://materials/FireElementalSkin.tres" type="Material" id=5]
+[ext_resource path="res://sounds/fire_loop2.wav" type="AudioStream" id=6]
 
 [sub_resource type="PrismMesh" id=1]
 material = ExtResource( 5 )
@@ -44,6 +45,7 @@ shape = SubResource( 4 )
 Health = 300.0
 
 [node name="Flammable" parent="." instance=ExtResource( 3 )]
+visible = false
 IgnitionPoint = 1e+06
 Flammability = 0.0
 
@@ -73,5 +75,8 @@ omni_range = 1.0
 transform = Transform( 0.81039, -0.419118, 0.4094, 0, 0.698765, 0.715351, -0.585891, -0.579713, 0.566272, 19.3632, 32.4175, 25.7173 )
 current = true
 fov = 20.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
 
 [editable path="Rotator/fire_elemental"]

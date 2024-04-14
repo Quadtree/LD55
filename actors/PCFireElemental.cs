@@ -143,6 +143,22 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
         {
             this.FindChildByType<AnimationPlayer>().Play("Idle");
         }
+
+        var nearestActiveFire = GetTree().CurrentScene.FindChildrenByType<Flammable>().Where(it => it.IsOnFire).MinBy(it => it.GlobalTranslation.DistanceSquaredTo(GlobalTranslation));
+        if (nearestActiveFire != null)
+        {
+            var dist = nearestActiveFire.GlobalTranslation.DistanceTo(GlobalTranslation);
+
+            if (dist < 7)
+            {
+                if (!this.FindChildByType<AudioStreamPlayer>().Playing) this.FindChildByType<AudioStreamPlayer>().Play();
+                this.FindChildByType<AudioStreamPlayer>().VolumeDb = -dist * 2 + 2;
+            }
+            else
+            {
+                this.FindChildByType<AudioStreamPlayer>().Stop();
+            }
+        }
     }
 
     public override void _PhysicsProcess(float delta)
