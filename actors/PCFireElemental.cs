@@ -244,6 +244,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                 connTail.LookAt(sPos, Vector3.Up);
 
                 connTailMesh.Scale = new Vector3(GlobalTranslation.DistanceTo(sPos) / 2, 1, 1);
+
+                (connTailMesh.GetActiveMaterial(0) as SpatialMaterial).Uv1Scale = new Vector3(GlobalTranslation.DistanceTo(sPos) / 2, 1, 1);
             }
         }
     }
