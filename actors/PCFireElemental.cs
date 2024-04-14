@@ -193,6 +193,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                                 HasBrokenFree = true;
                                 validTargetArea = true;
                                 GetTree().CurrentScene.FindChildByType<TargetArea>().QueueFree();
+
+                                this.FindChildByName<Spatial>("control_band").QueueFree();
                             }
                             else
                             {
