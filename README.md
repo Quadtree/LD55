@@ -7,6 +7,7 @@
 
 ## Day 3
 - Fireball explosion
+- Some kind of bounds
 - Sound
 - Music
 
