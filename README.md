@@ -10,7 +10,6 @@
 - Final outer walls for fort scene
 - Ensure upgrades actually work
 - More fire themed UI
-- Final in game UI
 - Sound
 - Music
 
@@ -28,3 +27,4 @@
 - Post level screen
 - Final character graphics
 - Description of controls
+- Final in game UI
