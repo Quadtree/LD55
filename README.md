@@ -6,8 +6,6 @@
 # TODO
 
 ## Day 3
-- Fireball explosion
-- Some kind of bounds
 - Sound
 - Music
 
@@ -30,3 +28,5 @@
 - Final outer walls for fort scene
 - More fire themed UI
 - Final furniture
+- Fireball explosion
+- Some kind of bounds

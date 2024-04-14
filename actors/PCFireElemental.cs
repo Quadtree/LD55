@@ -65,6 +65,9 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                 var destVal = dest.Value;
                 destVal.y = this.GetGlobalLocation().y;
 
+                destVal.x = Util.Clamp(destVal.x, -30, 30);
+                destVal.z = Util.Clamp(destVal.z, -30, 30);
+
                 LookAt(destVal, Vector3.Up);
 
                 cam.GlobalTransform = ct;
