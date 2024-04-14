@@ -6,7 +6,7 @@
 # TODO
 
 ## Day 3
-- Final furniture
+- Fireball explosion
 - Sound
 - Music
 
@@ -28,3 +28,4 @@
 - Ensure upgrades actually work
 - Final outer walls for fort scene
 - More fire themed UI
+- Final furniture
