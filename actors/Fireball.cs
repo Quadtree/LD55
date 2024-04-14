@@ -31,6 +31,8 @@ public class Fireball : MeshInstance
 
             Detonated = true;
 
+            Util.SpawnOneShotParticleSystem(GD.Load<PackedScene>("res://actors/vfx/FireballExplosion.tscn"), this, GlobalTranslation);
+
             QueueFree();
         }
     }
