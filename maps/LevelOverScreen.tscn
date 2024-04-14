@@ -4,7 +4,7 @@
 [ext_resource path="res://fonts/MainLarge.tres" type="DynamicFont" id=2]
 [ext_resource path="res://fonts/MainMedium.tres" type="DynamicFont" id=3]
 [ext_resource path="res://maps/AcceptSummoningButton.cs" type="Script" id=4]
-[ext_resource path="res://maps/LevelDesc.cs" type="Script" id=5]
+[ext_resource path="res://maps/LevelOverDesc.cs" type="Script" id=5]
 
 [node name="LevelOverScreen" type="Control"]
 anchor_right = 1.0
@@ -25,7 +25,7 @@ text = "Summoning Completed!"
 align = 1
 valign = 1
 
-[node name="LevelDesc" type="Label" parent="."]
+[node name="LevelOverDesc" type="Label" parent="."]
 anchor_left = 0.108
 anchor_top = 0.419
 anchor_right = 0.915
@@ -36,7 +36,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2
 custom_fonts/font = ExtResource( 3 )
-text = "You are being summoned to... somewhere. The Firelords demand that you set enough stuff on fire to meet your Fire Quota, which is currently <Quota>. As long as the summoner controls you, you can only shoot fireballs into the red circle. The summoner has a ##% chance to resist your attempts to break free."
+text = "You've completed your summoning! You managed to obtain <FP> out of your Fire Quota of <FQ>."
 align = 1
 valign = 1
 autowrap = true

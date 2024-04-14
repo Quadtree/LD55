@@ -8,7 +8,8 @@ public class LevelDesc : Label
     public override void _Ready()
     {
         var txt = Text;
-        Templater = () => txt.Replace("<Quota>", InterLevelState.Singleton.CurrentFireQuota.ToString())
+        Templater = () => $"Greetings {InterLevelState.RANKS[InterLevelState.Singleton.Level - 1]}!\n\n" +
+         txt.Replace("<Quota>", InterLevelState.Singleton.CurrentFireQuota.ToString())
             .Replace("##%", $"{InterLevelState.Singleton.SummonerSkill - InterLevelState.Singleton.PlayerBreakBonus}%");
     }
 
