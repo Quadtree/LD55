@@ -237,7 +237,9 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
             var summoner = GetTree().CurrentScene.FindChildByPredicate<Human>(it => it.IsSummoner);
             if (summoner != null)
             {
+
                 connTail.GlobalTranslation = (GlobalTranslation + summoner.GlobalTranslation) / 2;
+                connTail.LookAt(summoner.GlobalTranslation, Vector3.Up);
             }
         }
     }
