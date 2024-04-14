@@ -11,7 +11,7 @@ public class Fireball : MeshInstance
 
     public override void _Ready()
     {
-
+        Util.SpawnOneShotSound("res://sounds/fireball.wav", this, GlobalTranslation);
     }
 
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,6 +32,8 @@ public class Fireball : MeshInstance
             Detonated = true;
 
             Util.SpawnOneShotParticleSystem(GD.Load<PackedScene>("res://actors/vfx/FireballExplosion.tscn"), this, GlobalTranslation);
+
+            Util.SpawnOneShotSound("res://sounds/fireball2.wav", this, GlobalTranslation);
 
             QueueFree();
         }

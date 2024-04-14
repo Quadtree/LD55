@@ -197,5 +197,14 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
         var bolt = GD.Load<PackedScene>($"res://actors/bolts/{type}.tscn").Instance<Bolt>();
         GetTree().CurrentScene.AddChild(bolt);
         bolt.AimAtPoint(GlobalTranslation, target.AsSpatial);
+
+        if (type == BoltType.WoodBolt)
+        {
+            Util.SpawnOneShotSound("res://sounds/cbow.wav", this, GlobalTranslation);
+        }
+        else
+        {
+            Util.SpawnOneShotSound("res://sounds/spell.wav", this, GlobalTranslation);
+        }
     }
 }
