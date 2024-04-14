@@ -11,6 +11,7 @@
 - Final character graphics
 - Final furniture
 - Final outer walls for fort scene
+- More fire themed UI
 - Final in game UI
 - Sound
 - Music
