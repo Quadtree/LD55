@@ -231,7 +231,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
             }
         }
 
-        var connTail = this.FindChildByName<MeshInstance>("ConnectionTail");
+        var connTail = this.FindChildByName<Spatial>("ConnectionTail");
         if (connTail != null)
         {
             var summoner = GetTree().CurrentScene.FindChildByPredicate<Human>(it => it.IsSummoner);
