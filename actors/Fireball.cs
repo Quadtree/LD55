@@ -26,7 +26,7 @@ public class Fireball : MeshInstance
             // detonation!
             foreach (var it in GetTree().CurrentScene.FindChildrenByType<Flammable>().Where(it => it.GlobalTranslation.DistanceSquaredTo(GlobalTranslation) < Mathf.Pow(1.5f, 2.0f)))
             {
-                it.Heat += 200;
+                it.Heat += 200 * (GetTree().CurrentScene.FindChildByType<PCFireElemental>()?.FirepowerModifier ?? 1f);
             }
 
             Detonated = true;

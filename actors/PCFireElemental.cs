@@ -33,6 +33,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
     public const float DECAY_RATE = 7;
 
+    public float FirepowerModifier => 1f + (InterLevelState.Singleton.FirepowerUpgrades * 0.5f);
+
     public override void _Ready()
     {
         LevelBasedBreakoutPower = InterLevelState.Singleton.PlayerBreakBonus;
@@ -193,7 +195,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                 .Where(it => HasBrokenFree || it.GlobalTranslation.DistanceSquaredTo(targetAreaPos ?? new Vector3()) < Mathf.Pow(4f, 2.0f))
                 .Where(it => it.GlobalTranslation.DistanceSquaredTo(GlobalTranslation) < Mathf.Pow(2.5f, 2.0f)))
             {
-                it.Heat += 75;
+                it.Heat += 75 * FirepowerModifier;
             }
         }
     }
