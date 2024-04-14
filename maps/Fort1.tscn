@@ -42,6 +42,8 @@ environment = SubResource( 5 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="4"]
 transform = Transform( 1, 0, 0, 0, -0.679493, 0.733682, 0, -0.733682, -0.679493, 0, 8.17808, 0 )
+shadow_enabled = true
+shadow_bias = 0.01
 
 [node name="InnerWall" type="Spatial" parent="." index="5"]
 
