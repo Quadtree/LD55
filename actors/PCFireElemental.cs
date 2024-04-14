@@ -70,7 +70,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
             }
         }
 
-        TimeBasedBreakoutPower += delta * 1.2f;
+        //TimeBasedBreakoutPower += delta * 1.2f;
 
         Util.SpeedUpPhysicsIfNeeded();
 
@@ -87,7 +87,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
             flammable.Heat = 0;
         }
 
-        damagable.Health -= delta * 5;
+        damagable.Health -= delta * 7;
 
         if (Input.IsActionJustPressed("cheat_finish_level"))
         {
