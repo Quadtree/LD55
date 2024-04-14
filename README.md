@@ -8,6 +8,8 @@
 ## Day 3
 - Sound
 - Music
+- Rebalance fire quotas
+- Add some furniture into the fort
 
 # Done
 - Summoner shoots at out of control FE
