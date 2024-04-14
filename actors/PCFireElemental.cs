@@ -35,6 +35,9 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
     public float FirepowerModifier => 1f + (InterLevelState.Singleton.FirepowerUpgrades * 0.5f);
 
+    [Export]
+    public bool Active = true;
+
     public override void _Ready()
     {
         LevelBasedBreakoutPower = InterLevelState.Singleton.PlayerBreakBonus;
@@ -42,6 +45,12 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
     public override void _Process(float delta)
     {
+        if (!Active)
+        {
+            //this.FindChildByType<AnimationPlayer>().Play("Idle");
+            return;
+        }
+
         Moving = false;
         if (Input.IsActionPressed("move"))
         {
@@ -135,6 +144,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
     public override void _PhysicsProcess(float delta)
     {
+        if (!Active) return;
+
         base._PhysicsProcess(delta);
 
         if (Input.IsActionPressed("action") && GlobalCooldown >= 1)
