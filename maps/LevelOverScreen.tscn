@@ -3,7 +3,7 @@
 [ext_resource path="res://fonts/MainXLarge.tres" type="DynamicFont" id=1]
 [ext_resource path="res://fonts/MainLarge.tres" type="DynamicFont" id=2]
 [ext_resource path="res://fonts/MainMedium.tres" type="DynamicFont" id=3]
-[ext_resource path="res://maps/AcceptSummoningButton.cs" type="Script" id=4]
+[ext_resource path="res://maps/ReturnToPoolButton.cs" type="Script" id=4]
 [ext_resource path="res://maps/LevelOverDesc.cs" type="Script" id=5]
 
 [node name="LevelOverScreen" type="Control"]
@@ -42,7 +42,7 @@ valign = 1
 autowrap = true
 script = ExtResource( 5 )
 
-[node name="AcceptSummoningButton" type="Button" parent="."]
+[node name="ReturnToPoolButton" type="Button" parent="."]
 anchor_left = 0.3
 anchor_top = 0.844
 anchor_right = 0.7
