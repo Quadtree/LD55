@@ -4,10 +4,10 @@
 - Burn It All
 
 # TODO
-- Post level screen
 - Win screen
 
 ## Day 3
+- Post level screen
 - Final character graphics
 - Final furniture
 - Final outer walls for fort scene
