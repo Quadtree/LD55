@@ -8,7 +8,6 @@
 ## Day 3
 - Final furniture
 - Final outer walls for fort scene
-- Ensure upgrades actually work
 - More fire themed UI
 - Sound
 - Music
@@ -28,3 +27,4 @@
 - Final character graphics
 - Description of controls
 - Final in game UI
+- Ensure upgrades actually work
