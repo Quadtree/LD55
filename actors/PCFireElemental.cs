@@ -230,6 +230,16 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                 it.Heat += 75 * FirepowerModifier;
             }
         }
+
+        var connTail = this.FindChildByName<MeshInstance>("ConnectionTail");
+        if (connTail != null)
+        {
+            var summoner = GetTree().CurrentScene.FindChildByPredicate<Human>(it => it.IsSummoner);
+            if (summoner != null)
+            {
+                connTail.GlobalTranslation = (GlobalTranslation + summoner.GlobalTranslation) / 2;
+            }
+        }
     }
 
     public void FlameSlash()

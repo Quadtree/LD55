@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://actors/PCFireElemental.cs" type="Script" id=1]
 [ext_resource path="res://components/Damagable.tscn" type="PackedScene" id=2]
@@ -32,6 +32,13 @@ emission_on_uv2 = false
 emission_texture = ExtResource( 7 )
 uv1_scale = Vector3( 5, 1, 1 )
 uv1_offset = Vector3( 0, 0.25, 0 )
+
+[sub_resource type="PlaneMesh" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
+params_use_alpha_scissor = true
+params_alpha_scissor_threshold = 0.98
+albedo_texture = ExtResource( 7 )
 
 [node name="PCFireElemental" type="KinematicBody"]
 collision_mask = 5
@@ -99,6 +106,11 @@ stream = ExtResource( 6 )
 
 [node name="Cylinder" parent="control_band" index="0"]
 material/0 = SubResource( 5 )
+
+[node name="ConnectionTail" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 2.37683 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
 
 [editable path="Rotator/fire_elemental"]
 [editable path="control_band"]
