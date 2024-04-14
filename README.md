@@ -7,6 +7,7 @@
 
 ## Day 3
 - Sound
+- "Break failed" effect
 - Music
 - Rebalance fire quotas
 - Add some furniture into the fort
