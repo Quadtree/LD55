@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://maps/Default.tscn" type="PackedScene" id=1]
 [ext_resource path="res://actors/props/WoodenWall.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://actors/props/Table.tscn" type="PackedScene" id=8]
 [ext_resource path="res://actors/WardingRune.tscn" type="PackedScene" id=9]
 [ext_resource path="res://textures/stone.png" type="Texture" id=10]
+[ext_resource path="res://actors/props/Table2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://actors/props/Barrel.tscn" type="PackedScene" id=12]
+[ext_resource path="res://actors/props/Chair.tscn" type="PackedScene" id=13]
+[ext_resource path="res://actors/EliteCrossbowman.tscn" type="PackedScene" id=14]
 
 [sub_resource type="PlaneMesh" id=4]
 size = Vector2( 40, 40 )
@@ -168,9 +172,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
 [node name="Prop5" parent="InnerWallCircle/Wall7" index="4" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
 
-[node name="Prop8" parent="InnerWallCircle/Wall7" index="5" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
-
 [node name="Wall8" parent="InnerWallCircle" index="7" instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.05582, 0.00632381, 11.9911 )
 
@@ -229,8 +230,89 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 10 )
 [node name="Prop2" parent="Furniture" index="1" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 8 )
 
-[node name="Prop3" parent="Furniture" index="2" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 8.82, 8, 0, 6 )
-
 [node name="WardingRune" parent="." index="12" instance=ExtResource( 9 )]
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 1, -0.418816, -4 )
+
+[node name="Prop" parent="." index="13" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.85522, 0.02563, 10.4911 )
+
+[node name="Prop2" parent="." index="14" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.56587, 0.0216103, 7.09501 )
+
+[node name="Prop3" parent="." index="15" instance=ExtResource( 13 )]
+transform = Transform( -0.973599, 0, -0.228266, 0, 1, 0, 0.228266, 0, -0.973599, 7.05304, 0.0257263, 10.4797 )
+
+[node name="Prop4" parent="." index="16" instance=ExtResource( 13 )]
+transform = Transform( -0.999764, 0, 0.021745, 0, 1, 0, -0.021745, 0, -0.999764, 6.98239, 0.0257263, 8.04777 )
+
+[node name="Prop5" parent="." index="17" instance=ExtResource( 13 )]
+transform = Transform( -0.999764, 0, 0.021745, 0, 1, 0, -0.021745, 0, -0.999764, 7.02523, 0.0257263, 5.74958 )
+
+[node name="Prop" parent="Prop5" index="4" instance=ExtResource( 11 )]
+transform = Transform( 0.0251475, 0, -0.999683, 0, 1, 0, 0.999683, 0, 0.0251475, 8.14359, 0.016161, -4.98404 )
+
+[node name="Prop6" parent="." index="18" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6189, 0.0246506, 17.6041 )
+
+[node name="Prop7" parent="." index="19" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7651, 0.0296316, 16.3349 )
+
+[node name="Prop8" parent="." index="20" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8531, 0.0296049, 14.8016 )
+
+[node name="Prop9" parent="." index="21" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1879, 0.0296049, 13.8081 )
+
+[node name="Prop10" parent="." index="22" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5569, 0.0248175, -5.59066 )
+
+[node name="Prop11" parent="." index="23" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6241, 0.024766, -10.2913 )
+
+[node name="Prop12" parent="." index="24" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8988, 0.024724, -14.1856 )
+
+[node name="Prop13" parent="." index="25" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.657, 0.0247231, -14.9669 )
+
+[node name="Prop14" parent="." index="26" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3824, 0.0177832, -16.5759 )
+
+[node name="Prop15" parent="." index="27" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2985, 0.0177975, -16.7107 )
+
+[node name="Prop16" parent="." index="28" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7679, 0.0178099, -15.5297 )
+
+[node name="Prop17" parent="." index="29" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.811, 0.0178099, -17.677 )
+
+[node name="Prop18" parent="." index="30" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6415, 0.016737, 4.16794 )
+
+[node name="Prop19" parent="." index="31" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6359, 0.0162268, -3.85667 )
+
+[node name="Prop20" parent="." index="32" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3987, 0.0167465, 7.22803 )
+
+[node name="Prop21" parent="." index="33" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.752, 0.0345325, 4.15911 )
+
+[node name="EliteCrossbowman" parent="." index="34" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.48286, 0.0194588, 17.8012 )
+
+[node name="EliteCrossbowman2" parent="." index="35" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35263, 0.0349503, 18.5017 )
+
+[node name="EliteCrossbowman3" parent="." index="36" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83345, 0.0348024, 18.7535 )
+
+[node name="EliteCrossbowman4" parent="." index="37" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.17198, 0.0348272, 18.7464 )
+
+[node name="EliteCrossbowman5" parent="." index="38" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5988, 0.0179167, 9.40146 )
+
+[node name="EliteCrossbowman6" parent="." index="39" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1322, 0.0278921, 18.5368 )

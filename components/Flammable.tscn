@@ -75,15 +75,18 @@ cast_shadow = 0
 mesh = SubResource( 2 )
 
 [node name="FireLight" type="OmniLight" parent="."]
+visible = false
 light_color = Color( 1, 0.690196, 0, 1 )
 
 [node name="Fire" type="Particles" parent="."]
+visible = false
 amount = 30
 local_coords = false
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 4 )
 
 [node name="Smoke" type="Particles" parent="."]
+visible = false
 amount = 30
 lifetime = 2.0
 local_coords = false

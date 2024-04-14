@@ -19,7 +19,10 @@ public class Flammable : Spatial
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-
+        this.FindChildByName<Particles>("Fire").Visible = true;
+        this.FindChildByName<Particles>("Smoke").Visible = true;
+        this.FindChildByName<Particles>("Fire").Emitting = false;
+        this.FindChildByName<Particles>("Smoke").Emitting = false;
     }
 
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
