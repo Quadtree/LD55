@@ -6,3 +6,6 @@
 CanCastFireBolt = true
 CanCastWaterBolt = true
 IsSummoner = true
+StandAnimation = "StandCaster"
+MoveAnimation = "RunCaster"
+AttackAnimation = "CasterCast"

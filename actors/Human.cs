@@ -42,6 +42,17 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
     [Export]
     public float DifficultyAdded { get; set; } = 2;
 
+    [Export]
+    public string StandAnimation;
+
+    [Export]
+    public string MoveAnimation;
+
+    [Export]
+    public string AttackAnimation;
+
+    bool Moving;
+
     public Actor MainTarget;
 
     Vector3 BurnRun;
@@ -59,11 +70,23 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
-
+        if (BoltCharge < 1 && (AttackAnimation?.Length ?? 0) > 0)
+        {
+            this.FindChildByType<AnimationPlayer>().Play(AttackAnimation);
+        }
+        else
+        {
+            if (Moving)
+                this.FindChildByType<AnimationPlayer>().Play(MoveAnimation);
+            else
+                this.FindChildByType<AnimationPlayer>().Play(StandAnimation);
+        }
     }
 
     public override void _PhysicsProcess(float delta)
     {
+        Moving = false;
+
         if (this.FindChildByType<Damagable>().Health <= 0)
         {
             GlobalRotation = new Vector3(0, GlobalRotation.y, Mathf.Pi / 2);
@@ -84,6 +107,7 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
             }
 
             MoveTowards(GlobalTranslation + BurnRun * 10);
+            Moving = true;
             return;
         }
 
@@ -104,6 +128,7 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
                 {
                     // we're too far away. get closer
                     MoveTowards(MainTarget.AsSpatial.GlobalTranslation);
+                    Moving = true;
                 }
                 else
                 {
