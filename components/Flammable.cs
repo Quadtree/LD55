@@ -58,7 +58,7 @@ public class Flammable : Spatial
             this.FindChildByName<Particles>("Fire").Emitting = false;
         }
 
-        if (Heat > 0)
+        if (Heat > 5)
         {
             this.FindChildByName<Particles>("Smoke").Emitting = true;
         }
