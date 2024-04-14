@@ -1,5 +1,14 @@
 public class InterLevelState
 {
+    public string[] RANKS = {
+        "Spark",
+        "Candle",
+        "Torch",
+        "Campfire",
+        "Bonfire",
+        "Wildfire"
+    };
+
     public int Level = 1;
     public int FirepowerUpgrades;
     public int SpeedUpgrades;
