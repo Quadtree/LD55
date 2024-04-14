@@ -6,7 +6,6 @@
 # TODO
 
 ## Day 3
-- Sound
 - "Break failed" effect
 - Music
 - Rebalance fire quotas
@@ -33,3 +32,4 @@
 - Final furniture
 - Fireball explosion
 - Some kind of bounds
+- Sound
