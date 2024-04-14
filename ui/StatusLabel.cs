@@ -18,6 +18,6 @@ public class StatusLabel : Label
     public override void _Process(float delta)
     {
         var pc = GetTree().CurrentScene.FindChildByType<PCFireElemental>();
-        Text = $"Mana: {pc.Mana:n0}     Summoner Skill: {pc.SummonerSkill:n0} vs. ({pc.TimeBasedBreakoutPower:n0}+{pc.AttemptBasedBreakoutPower:n0}+{pc.LevelBasedBreakoutPower:n0})     Broken Free: {pc.HasBrokenFree}     Fire Points: {pc.FirePoints:n0}     Health: {pc.FindChildByType<Damagable>().Health:n0}";
+        Text = $"Mana: {pc.Mana:n0}     FP: {pc.FirePoints:n0}     HP: {pc.FindChildByType<Damagable>().Health:n0}";
     }
 }
