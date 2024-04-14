@@ -79,11 +79,13 @@ light_color = Color( 1, 0.690196, 0, 1 )
 
 [node name="Fire" type="Particles" parent="."]
 amount = 30
+local_coords = false
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 4 )
 
 [node name="Smoke" type="Particles" parent="."]
 amount = 30
 lifetime = 2.0
+local_coords = false
 process_material = SubResource( 8 )
 draw_pass_1 = SubResource( 10 )
