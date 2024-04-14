@@ -14,7 +14,7 @@ public class LevelOverDesc : Label
 
         if (InterLevelState.Singleton.LastLevelFirePoints >= InterLevelState.Singleton.CurrentFireQuota)
         {
-            Text += $" As you have made your quota, you have been promoted to the rank of {InterLevelState.RANKS[InterLevelState.Singleton.Level]}";
+            Text += $" As you have made your quota, you have been promoted to the rank of {InterLevelState.RANKS[InterLevelState.Singleton.Level]}!";
             InterLevelState.Singleton.Level++;
         }
         else
