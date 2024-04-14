@@ -35,6 +35,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
     public float FirepowerModifier => 1f + (InterLevelState.Singleton.FirepowerUpgrades * 0.5f);
 
+    public float ConnTailAlpha = 0f;
+
     [Export]
     public bool Active = true;
 
@@ -202,6 +204,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                                 Mana -= FIREBALL_MANA_COST;
                                 AttemptBasedBreakoutPower += 5;
                                 GlobalCooldown = 0;
+                                ConnTailAlpha = .35f;
                             }
                         }
                     }
@@ -245,9 +248,15 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
                 connTailMesh.Scale = new Vector3(GlobalTranslation.DistanceTo(sPos) / 2, 1, 1);
 
-                (connTailMesh.GetActiveMaterial(0) as SpatialMaterial).Uv1Scale = new Vector3(GlobalTranslation.DistanceTo(sPos) / 2, 1, 1);
+                var ctm = connTailMesh.GetActiveMaterial(0) as SpatialMaterial;
+
+                ctm.Uv1Scale = new Vector3(GlobalTranslation.DistanceTo(sPos) / 2, 1, 1);
+
+                connTailMesh.Visible = ConnTailAlpha > 0;
             }
         }
+
+        ConnTailAlpha -= delta;
     }
 
     public void FlameSlash()
