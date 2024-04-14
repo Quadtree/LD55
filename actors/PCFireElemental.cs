@@ -18,6 +18,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
     public Spatial AsSpatial => this;
     public Actor AsActor => this;
 
+    bool Moving;
+
     [Export]
     public float ManaRegenPerSecond = 10f;
 
@@ -36,6 +38,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
     public override void _Process(float delta)
     {
+        Moving = false;
         if (Input.IsActionPressed("move"))
         {
             var dest = Picking.PickPointAtCursor(this);
@@ -54,6 +57,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                 cam.GlobalTransform = ct;
 
                 MoveAndSlide((destVal - GlobalTranslation).Normalized() * (6 + 3 * InterLevelState.Singleton.SpeedUpgrades));
+                Moving = true;
 
                 for (var i = 0; i < GetSlideCount(); ++i)
                 {
@@ -108,6 +112,19 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
             {
                 GetTree().ChangeScene("res://maps/LevelOverScreen.tscn");
             }
+        }
+
+        if (GlobalCooldown < 1)
+        {
+            this.FindChildByType<AnimationPlayer>().Play("Shoot");
+        }
+        else if (Moving)
+        {
+            this.FindChildByType<AnimationPlayer>().Play("Run");
+        }
+        else
+        {
+            this.FindChildByType<AnimationPlayer>().Play("Idle");
         }
     }
 
