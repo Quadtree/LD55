@@ -84,6 +84,16 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
         }
 
         damagable.Health -= delta * 5;
+
+        if (Input.IsActionJustPressed("cheat_finish_level"))
+        {
+            this.FindChildByType<Damagable>().Health = 1;
+        }
+
+        if (Input.IsActionJustPressed("cheat_grant_fire_quota"))
+        {
+            FirePoints += 100;
+        }
     }
 
     public override void _PhysicsProcess(float delta)
