@@ -4,13 +4,14 @@
 - Burn It All
 
 # TODO
-- Win screen
+
 
 ## Day 3
 - Post level screen
 - Final character graphics
 - Final furniture
 - Final outer walls for fort scene
+- Ensure upgrades actually work
 - More fire themed UI
 - Final in game UI
 - Sound
@@ -25,3 +26,4 @@
 - Randomized levels
 - Differing summoner skills
 - Inter-level scene, fire quota
+- Win screen
