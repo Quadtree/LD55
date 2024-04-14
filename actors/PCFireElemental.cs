@@ -43,6 +43,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
     public override void _Ready()
     {
         LevelBasedBreakoutPower = InterLevelState.Singleton.PlayerBreakBonus;
+
+        if (Active) this.FindChildByName<Spatial>("control_band").Visible = true;
     }
 
     public override void _Process(float delta)
@@ -197,6 +199,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                                 GetTree().CurrentScene.FindChildByType<TargetArea>().QueueFree();
 
                                 this.FindChildByName<Spatial>("control_band").QueueFree();
+
+                                Util.SpawnOneShotSound("res://sounds/break3.wav", this);
                             }
                             else
                             {
@@ -205,6 +209,8 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
                                 AttemptBasedBreakoutPower += 5;
                                 GlobalCooldown = 0;
                                 ConnTailAlpha = .35f;
+
+                                Util.SpawnOneShotSound("res://sounds/chained.wav", this);
                             }
                         }
                     }
