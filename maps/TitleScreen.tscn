@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/MainXLarge.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/MainLarge.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/MainMedium.tres" type="DynamicFont" id=3]
+[ext_resource path="res://maps/ReturnToTitleButton.cs" type="Script" id=4]
+
+[node name="LevelOverScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 1462, 138 )
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 0.171
+anchor_right = 1.0
+anchor_bottom = 0.368
+margin_top = -8.68001
+margin_bottom = -43.44
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 6
+custom_constants/shadow_offset_y = 6
+custom_fonts/font = ExtResource( 1 )
+text = "Fire Quota"
+align = 1
+valign = 1
+
+[node name="LevelOverDesc" type="Label" parent="."]
+anchor_left = 0.108
+anchor_top = 0.419
+anchor_right = 0.915
+anchor_bottom = 0.609
+margin_top = 0.47998
+margin_bottom = 0.279968
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = ExtResource( 3 )
+text = "You are a fire elemental, being summoned by annoying wizards. Be sure to set a lot of stuff on fire during your visits so you can meet your fire quota and please the Firelords."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="LevelOverDesc2" type="Label" parent="."]
+anchor_left = 0.124
+anchor_top = 0.79
+anchor_right = 0.99
+anchor_bottom = 0.99
+margin_left = 134.92
+margin_top = 25.8
+margin_right = 2.44006
+margin_bottom = 4.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Made by Quadtree for Ludum Dare 55"
+align = 2
+valign = 2
+autowrap = true
+
+[node name="ReturnToTitleButton" type="Button" parent="."]
+anchor_left = 0.3
+anchor_top = 0.844
+anchor_right = 0.7
+anchor_bottom = 0.927
+margin_top = -0.52002
+margin_bottom = -0.160034
+custom_fonts/font = ExtResource( 2 )
+text = "Start Game"
+script = ExtResource( 4 )
