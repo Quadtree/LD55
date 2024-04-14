@@ -11,7 +11,6 @@
 - Ensure upgrades actually work
 - More fire themed UI
 - Final in game UI
-- Description of controls
 - Sound
 - Music
 
@@ -28,3 +27,4 @@
 - Title screen
 - Post level screen
 - Final character graphics
+- Description of controls
