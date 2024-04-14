@@ -12,6 +12,7 @@
 - Ensure upgrades actually work
 - More fire themed UI
 - Final in game UI
+- Description of controls
 - Sound
 - Music
 
