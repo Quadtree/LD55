@@ -61,9 +61,9 @@ custom_constants/separation = 25
 alignment = 1
 
 [node name="UpgradePointsLabel" type="Label" parent="HBoxContainer"]
-margin_top = 21.0
+margin_top = 24.0
 margin_right = 250.0
-margin_bottom = 174.0
+margin_bottom = 171.0
 rect_min_size = Vector2( 250, 0 )
 size_flags_horizontal = 4
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
