@@ -103,6 +103,7 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
         {
             // end level
             InterLevelState.Singleton.LastLevelFirePoints = FirePoints;
+            InterLevelState.Singleton.TotalFirePoints += FirePoints;
 
             if (FirePoints >= InterLevelState.Singleton.CurrentFireQuota && InterLevelState.Singleton.Level >= 4)
             {
