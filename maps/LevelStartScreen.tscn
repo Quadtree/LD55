@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://maps/LevelStartScreen.cs" type="Script" id=1]
 [ext_resource path="res://fonts/MainXLarge.tres" type="DynamicFont" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://fonts/MainLarge.tres" type="DynamicFont" id=7]
 [ext_resource path="res://maps/AcceptSummoningButton.cs" type="Script" id=8]
 [ext_resource path="res://maps/LevelNumberLabel.cs" type="Script" id=9]
+[ext_resource path="res://maps/parts/LavaBackground.tscn" type="PackedScene" id=10]
 
 [node name="LevelStartScreen" type="Control"]
 anchor_right = 1.0
@@ -106,3 +107,13 @@ margin_bottom = -0.160034
 custom_fonts/font = ExtResource( 7 )
 text = "Accept Summoning"
 script = ExtResource( 8 )
+
+[node name="Spatial" parent="." instance=ExtResource( 10 )]
+
+[node name="Camera" parent="Spatial" index="2"]
+transform = Transform( 0.870485, 0, -0.492195, 0, 1, 0, 0.492195, 0, 0.870485, 0.621205, -0.47287, 2.69718 )
+
+[editable path="Spatial"]
+[editable path="Spatial/fire_cave"]
+[editable path="Spatial/PCFireElemental"]
+[editable path="Spatial/PCFireElemental/Rotator/fire_elemental"]
