@@ -27,7 +27,8 @@ public class Flammable : Spatial
     {
         if (IsOnFire)
         {
-            Visible = true;
+            this.FindChildByType<OmniLight>().Visible = true;
+            this.FindChildByName<Particles>("Fire").Emitting = true;
 
             if (Util.RandChance(delta))
             {
@@ -50,8 +51,20 @@ public class Flammable : Spatial
         }
         else
         {
-            Visible = false;
+            this.FindChildByType<OmniLight>().Visible = false;
+            this.FindChildByName<Particles>("Fire").Emitting = false;
         }
+
+        if (Heat > 0)
+        {
+            this.FindChildByName<Particles>("Smoke").Emitting = true;
+        }
+        else
+        {
+            this.FindChildByName<Particles>("Smoke").Emitting = false;
+        }
+
+        GlobalRotation = new Vector3(0, 0, 0);
 
         Heat = Util.Clamp(Heat - delta * FIRE_SPEED, 0, 1000);
     }
