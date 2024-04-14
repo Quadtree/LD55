@@ -6,7 +6,6 @@
 # TODO
 
 ## Day 3
-- "Break failed" effect
 - Music
 - Rebalance fire quotas
 - Add some furniture into the fort
@@ -33,3 +32,4 @@
 - Fireball explosion
 - Some kind of bounds
 - Sound
+- "Break failed" effect
