@@ -101,6 +101,11 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
         if (this.FindChildByType<Damagable>().Health <= 0)
         {
             GlobalRotation = new Vector3(0, GlobalRotation.y, Mathf.Pi / 2);
+            GlobalTranslation = new Vector3(
+                GlobalTranslation.x,
+                0.0f,
+                GlobalTranslation.z
+            );
             return;
         }
 

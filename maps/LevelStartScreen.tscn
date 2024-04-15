@@ -117,3 +117,4 @@ transform = Transform( 0.870485, 0, -0.492195, 0, 1, 0, 0.492195, 0, 0.870485, 0
 [editable path="Spatial/fire_cave"]
 [editable path="Spatial/PCFireElemental"]
 [editable path="Spatial/PCFireElemental/Rotator/fire_elemental"]
+[editable path="Spatial/PCFireElemental/control_band"]

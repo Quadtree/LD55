@@ -4,7 +4,7 @@
 - Burn It All
 
 # TODO
-- Stop weird floating
+- Figure out animation issue
 
 # Done
 - Summoner shoots at out of control FE
@@ -34,6 +34,7 @@
 - Check why chain doesn't appear
 - Make levels alternate
 - Reset state
+- Stop weird floating
 
 # WNF
 - Add some furniture into the fort
