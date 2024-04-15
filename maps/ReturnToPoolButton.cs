@@ -18,7 +18,7 @@ public class ReturnToPoolButton : Button
             var audioStreamPlayer = new AudioStreamPlayer();
             GetTree().Root.AddChild(audioStreamPlayer);
             audioStreamPlayer.Stream = GD.Load<AudioStream>("res://music/bgm.ogg");
-            audioStreamPlayer.VolumeDb = -5;
+            audioStreamPlayer.VolumeDb = -10;
             audioStreamPlayer.Play();
         }
 
