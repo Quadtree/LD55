@@ -4,8 +4,8 @@
 - Burn It All
 
 # TODO
-- Make levels alternate
 - Reset state
+- Stop weird floating
 
 # Done
 - Summoner shoots at out of control FE
@@ -33,6 +33,7 @@
 - Music
 - Rebalance fire quotas
 - Check why chain doesn't appear
+- Make levels alternate
 
 # WNF
 - Add some furniture into the fort
