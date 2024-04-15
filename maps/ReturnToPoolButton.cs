@@ -13,10 +13,11 @@ public class ReturnToPoolButton : Button
 
     void StartLevel()
     {
-        if (StartMusic)
+        if (StartMusic && GetTree().Root.FindChildByName<AudioStreamPlayer>("BGM") == null)
         {
             var audioStreamPlayer = new AudioStreamPlayer();
             GetTree().Root.AddChild(audioStreamPlayer);
+            audioStreamPlayer.Name = "BGM";
             audioStreamPlayer.Stream = GD.Load<AudioStream>("res://music/bgm.ogg");
             audioStreamPlayer.VolumeDb = -10;
             audioStreamPlayer.Play();
