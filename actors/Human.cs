@@ -87,6 +87,11 @@ public class Human : KinematicBody, Actor, HasFaction, DifficultyIncreasing
             else
                 this.FindChildByType<AnimationPlayer>().Play(StandAnimation);
         }
+
+        if (OS.IsDebugBuild() && Input.IsActionJustPressed("cheat_make_summoner_better") && IsSummoner)
+        {
+            SummonerSkill += 100;
+        }
     }
 
     public override void _PhysicsProcess(float delta)
