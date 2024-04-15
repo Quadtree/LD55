@@ -119,6 +119,11 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
             FirePoints += 100;
         }
 
+        if (OS.IsDebugBuild() && Input.IsActionJustPressed("screenshot"))
+        {
+            Util.TakeScreenshot(this);
+        }
+
         if (this.FindChildByType<Damagable>().Health <= 0)
         {
             // end level
