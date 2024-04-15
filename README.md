@@ -4,7 +4,6 @@
 - Burn It All
 
 # TODO
-- Reset state
 - Stop weird floating
 
 # Done
@@ -34,6 +33,7 @@
 - Rebalance fire quotas
 - Check why chain doesn't appear
 - Make levels alternate
+- Reset state
 
 # WNF
 - Add some furniture into the fort
