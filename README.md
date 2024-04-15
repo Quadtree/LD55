@@ -4,7 +4,6 @@
 - Burn It All
 
 # TODO
-- Check why chain doesn't appear
 
 # Done
 - Summoner shoots at out of control FE
@@ -31,6 +30,7 @@
 - "Break failed" effect
 - Music
 - Rebalance fire quotas
+- Check why chain doesn't appear
 
 # WNF
 - Add some furniture into the fort
