@@ -4,9 +4,7 @@
 - Burn It All
 
 # TODO
-
-## Day 3
-- Add some furniture into the fort
+- Check why chain doesn't appear
 
 # Done
 - Summoner shoots at out of control FE
@@ -33,3 +31,6 @@
 - "Break failed" effect
 - Music
 - Rebalance fire quotas
+
+# WNF
+- Add some furniture into the fort
