@@ -109,12 +109,12 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
 
         damagable.Health -= delta * DECAY_RATE;
 
-        if (Input.IsActionJustPressed("cheat_finish_level"))
+        if (OS.IsDebugBuild() && Input.IsActionJustPressed("cheat_finish_level"))
         {
             this.FindChildByType<Damagable>().Health = 1;
         }
 
-        if (Input.IsActionJustPressed("cheat_grant_fire_quota"))
+        if (OS.IsDebugBuild() && Input.IsActionJustPressed("cheat_grant_fire_quota"))
         {
             FirePoints += 100;
         }
