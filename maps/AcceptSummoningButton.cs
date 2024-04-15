@@ -17,9 +17,17 @@ public class AcceptSummoningButton : Button
     {
         Default.DifficultyOverride = InterLevelState.Singleton.Difficulty;
 
-        if (Util.RandChance(0.5f))
-            GetTree().ChangeScene("res://maps/Fort1.tscn");
-        else
-            GetTree().ChangeScene("res://maps/StaticLab1.tscn");
+        string nextLevel = null;
+        for (var i = 0; i < 10 && (nextLevel == null || nextLevel == InterLevelState.Singleton.LastLevelName); ++i)
+        {
+            if (Util.RandChance(0.5f))
+                nextLevel = ("res://maps/Fort1.tscn");
+            else
+                nextLevel = ("res://maps/StaticLab1.tscn");
+        }
+
+        InterLevelState.Singleton.LastLevelName = nextLevel;
+
+        GetTree().ChangeScene(nextLevel);
     }
 }
