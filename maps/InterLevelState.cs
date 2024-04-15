@@ -26,5 +26,7 @@ public class InterLevelState
 
     public float TotalFirePoints = 0;
 
+    public string LastLevelName = "";
+
     public static InterLevelState Singleton = new InterLevelState();
 }

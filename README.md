@@ -4,6 +4,8 @@
 - Burn It All
 
 # TODO
+- Make levels alternate
+- Reset state
 
 # Done
 - Summoner shoots at out of control FE
