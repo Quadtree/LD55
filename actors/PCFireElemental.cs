@@ -44,7 +44,11 @@ public class PCFireElemental : KinematicBody, Actor, HasFaction
     {
         LevelBasedBreakoutPower = InterLevelState.Singleton.PlayerBreakBonus;
 
-        if (Active) this.FindChildByName<Spatial>("control_band").Visible = true;
+        if (Active)
+        {
+            this.FindChildByName<Spatial>("control_band").Visible = true;
+            this.FindChildByName<Spatial>("ConnectionTail").Visible = true;
+        }
     }
 
     public override void _Process(float delta)
