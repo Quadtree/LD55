@@ -6,8 +6,6 @@
 # TODO
 
 ## Day 3
-- Music
-- Rebalance fire quotas
 - Add some furniture into the fort
 
 # Done
@@ -33,3 +31,5 @@
 - Some kind of bounds
 - Sound
 - "Break failed" effect
+- Music
+- Rebalance fire quotas
