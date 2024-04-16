@@ -23,7 +23,7 @@ public class ReturnToPoolButton : Button
             audioStreamPlayer.Play();
         }
 
-        InterLevelState.Singleton = new InterLevelState();
+        if (StartMusic) InterLevelState.Singleton = new InterLevelState();
 
         GetTree().ChangeScene("res://maps/LevelStartScreen.tscn");
     }
